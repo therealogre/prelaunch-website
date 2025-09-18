@@ -1,0 +1,27 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Zimbabwe Flag Colors Accent -->
+  <rect x="6" y="6" width="28" height="4" fill="#00A651" opacity="0.8"/>
+  <rect x="6" y="10" width="28" height="4" fill="#FFD700" opacity="0.8"/>
+  <rect x="6" y="14" width="28" height="4" fill="#DC143C" opacity="0.8"/>
+  
+  <!-- Connect Symbol -->
+  <circle cx="12" cy="26" r="3" fill="white" opacity="0.9"/>
+  <circle cx="28" cy="26" r="3" fill="white" opacity="0.9"/>
+  <path d="M15 26 Q20 22 25 26" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+  
+  <!-- "H" Letter -->
+  <path d="M8 20 L8 32 M8 26 L12 26 M12 20 L12 32" stroke="white" stroke-width="2.5" fill="none" opacity="0.9"/>
+  
+  <!-- "C" Letter -->
+  <path d="M32 24 Q28 20 24 24 Q28 28 32 24" stroke="white" stroke-width="2.5" fill="none" opacity="0.9"/>
+</svg>
