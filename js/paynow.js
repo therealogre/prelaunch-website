@@ -1,10 +1,10 @@
 // PayNow Integration for Helensvale Connect Pre-Launch
 class PayNowIntegration {
     constructor() {
-        this.integrationId = 'YOUR_INTEGRATION_ID'; // Replace with actual ID
-        this.integrationKey = 'YOUR_INTEGRATION_KEY'; // Replace with actual key
-        this.resultUrl = 'https://helensvaleconnect.art/payment-result';
-        this.returnUrl = 'https://helensvaleconnect.art/success.html';
+        this.integrationId = '21545'; // PowerHouse Ventures Integration ID
+        this.integrationKey = 'f073cc69-4438-418f-8b30-62779a5a2cb0'; // Real Integration Key
+        this.resultUrl = window.location.origin + '/payment-result.html';
+        this.returnUrl = window.location.origin + '/success.html';
         this.apiUrl = 'https://www.paynow.co.zw/interface/initiatetransaction';
     }
 
@@ -44,7 +44,7 @@ class PayNowIntegration {
     async initiatePayment(paymentData) {
         try {
             // Generate hash for security
-            const hash = this.generateHash(paymentData);
+            const hash = await this.generateHash(paymentData);
             paymentData.hash = hash;
 
             // Create form data
@@ -67,10 +67,8 @@ class PayNowIntegration {
         }
     }
 
-    // Generate hash for PayNow security
-    generateHash(data) {
-        // This is a simplified hash generation
-        // In production, use proper HMAC-SHA512 with your integration key
+    // Generate hash for PayNow security using proper HMAC-SHA512
+    async generateHash(data) {
         const values = [
             data.id,
             data.reference,
@@ -82,8 +80,22 @@ class PayNowIntegration {
             data.status
         ].join('');
         
-        // Note: This is a placeholder. Use proper crypto library for production
-        return btoa(values + this.integrationKey).substring(0, 40);
+        // Use Web Crypto API for proper HMAC-SHA512
+        const encoder = new TextEncoder();
+        const keyData = encoder.encode(this.integrationKey);
+        const messageData = encoder.encode(values);
+        
+        const cryptoKey = await crypto.subtle.importKey(
+            'raw',
+            keyData,
+            { name: 'HMAC', hash: 'SHA-512' },
+            false,
+            ['sign']
+        );
+        
+        const signature = await crypto.subtle.sign('HMAC', cryptoKey, messageData);
+        const hashArray = Array.from(new Uint8Array(signature));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
     // Parse PayNow response
@@ -178,10 +190,10 @@ class EnhancedRegistration {
                 <div class="payment-methods">
                     <h5>Payment Methods</h5>
                     <div class="method-icons">
-                        <img src="./assets/ecocash-logo.png" alt="EcoCash" title="EcoCash">
-                        <img src="./assets/onemoney-logo.png" alt="OneMoney" title="OneMoney">
-                        <img src="./assets/visa-logo.png" alt="Visa" title="Visa">
-                        <img src="./assets/mastercard-logo.png" alt="Mastercard" title="Mastercard">
+                        <img src="./assets/ecocash-logo.svg" alt="EcoCash" title="EcoCash">
+                        <img src="./assets/onemoney-logo.svg" alt="OneMoney" title="OneMoney">
+                        <img src="./assets/visa-logo.svg" alt="Visa" title="Visa">
+                        <img src="./assets/mastercard-logo.svg" alt="Mastercard" title="Mastercard">
                     </div>
                 </div>
             </div>

@@ -3,8 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeRegistrationSystem();
 });
 
-// Web3Forms Access Key (replace with actual key)
-const WEB3_FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE'; // Replace with actual Web3Forms access key
+// Web3Forms Access Key - Get yours at https://web3forms.com
+const WEB3_FORMS_ACCESS_KEY = '5c0b9311-f7eb-4a05-b1bd-c690b73f463d'; // Your actual Web3Forms access key
+
+// Instructions to get Web3Forms access key:
+// 1. Go to https://web3forms.com
+// 2. Sign up with your email
+// 3. Create a new form
+// 4. Copy the access key and replace the placeholder above
 
 // Registration system initialization
 function initializeRegistrationSystem() {

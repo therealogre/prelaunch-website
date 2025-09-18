@@ -6,6 +6,16 @@ AOS.init({
     offset: 100
 });
 
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initCountdown();
+    initEarlyAccessForm();
+    initScrollAnimations();
+    initPhoneFormatting();
+    initStatsCounter();
+    initializeRoleInteractivity();
+});
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileSidebar = document.getElementById('mobileSidebar');
@@ -369,15 +379,6 @@ function animateCounter(element) {
     }, duration / steps);
 }
 
-// Enhanced main script with role-based functionality
-document.addEventListener('DOMContentLoaded', () => {
-    initializeCountdown();
-    initializeMobileMenu();
-    initializeSmoothScrolling();
-    initializeEarlyAccessForm();
-    initializeAnimations();
-    initializeRoleInteractivity();
-});
 
 // Initialize role interactivity
 function initializeRoleInteractivity() {
