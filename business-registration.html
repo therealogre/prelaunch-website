@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Business - Helensvale Connect | Zimbabwe's Premier Business Platform</title>
+    <meta name="description" content="Join Zimbabwe's most successful business marketplace. From 9.99$/month, connect with affluent customers and grow your revenue exponentially.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    <link rel="stylesheet" href="./css/next-gen-styles.css">
+</head>
+<body>
+    <!-- Dynamic Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="./assets/logo.svg" alt="Helensvale Connect" class="logo">
+                <span class="brand-text">Helensvale Connect</span>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="nav-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="customer-registration.html" class="nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Join as Customer</span>
+                </a>
+                <a href="business-registration.html" class="nav-link active">
+                    <i class="fas fa-store"></i>
+                    <span>Join as Business</span>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="partnerships.html" class="dropdown-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Partners</span>
+                        </a>
+                        <a href="guides.html" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </a>
+                        <a href="faq.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Help</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-cta">
+                <a href="customer-registration.html" class="btn btn-primary">Join as Customer</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h4>Platform</h4>
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="sidebar-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Company</h4>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="guides.html" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Guides</span>
+                </a>
+                <a href="faq.html" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="help.html" class="sidebar-link">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="sidebar-cta">
+                <a href="customer-registration.html" class="btn btn-primary btn-full">Join as Customer</a>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Registration Hero -->
+    <section class="business-hero premium-hero">
+        <div class="hero-background">
+            <div class="luxury-gradient"></div>
+            <div class="floating-elements">
+                <div class="float-element" data-speed="2">🏪</div>
+                <div class="float-element" data-speed="1.5">💼</div>
+                <div class="float-element" data-speed="2.5">📈</div>
+                <div class="float-element" data-speed="1.8">💰</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge luxury-badge">
+                    <span class="badge-icon">🏪</span>
+                    <span class="badge-text">Business Registration</span>
+                </div>
+                <h1 class="hero-title luxury-title">
+                    Transform Your Business<br>
+                    <span class="gradient-text">Join Zimbabwe's Success Stories</span>
+                </h1>
+                <p class="hero-description luxury-description">
+                    Connect with Zimbabwe's most affluent customers and watch your revenue grow by 240% on average. From 9.99$/month.
+                </p>
+                
+                <!-- ROI Preview -->
+                <div class="roi-preview" data-aos="fade-up" data-aos-delay="200">
+                    <div class="roi-highlight">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Average 240% revenue growth within 6 months</span>
+                    </div>
+                    <div class="roi-highlight">
+                        <i class="fas fa-users"></i>
+                        <span>Access to 15,000+ premium customers</span>
+                    </div>
+                    <div class="roi-highlight">
+                        <i class="fas fa-crown"></i>
+                        <span>Priority placement in Zimbabwe's elite marketplace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Plans Section -->
+    <section class="business-plans-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Choose Your Growth Plan</h2>
+                <p class="section-description">Select the perfect plan to scale your business in Zimbabwe's premium marketplace</p>
+            </div>
+            
+            <div class="plans-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Starter Business Plan -->
+                <div class="plan-card business-plan" data-plan="starter">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Starter Business</h3>
+                        <div class="plan-price">
+                            <span class="amount">9.99</span>
+                            <span class="currency">$</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="roi-badge">240% Average ROI</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-store"></i>
+                            <span>Basic marketplace listing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Performance analytics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Standard delivery integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Email support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile payment processing</span>
+                        </div>
+                    </div>
+                    <div class="plan-cta">
+                        <button class="btn btn-outline select-plan-btn" data-plan="starter">
+                            Start Growing - 9.99$
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Growth Business Plan -->
+                <div class="plan-card business-plan featured" data-plan="growth">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Growth Business</h3>
+                        <div class="plan-price">
+                            <span class="amount">39.99</span>
+                            <span class="currency">$</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="roi-badge">400% Average ROI</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium marketplace placement</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Marketing automation tools</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Advanced analytics & insights</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Customer relationship management</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Priority customer support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Growth acceleration program</span>
+                        </div>
+                    </div>
+                    <div class="plan-cta">
+                        <button class="btn btn-primary select-plan-btn" data-plan="growth">
+                            Scale Your Business - 39.99$
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Registration Form -->
+    <section class="business-registration-section">
+        <div class="container">
+            <div class="registration-container">
+                <div class="form-header" data-aos="fade-up">
+                    <h2>Complete Your Business Registration</h2>
+                    <p>Join Zimbabwe's most successful business community in just a few steps</p>
+                </div>
+
+                <form id="businessRegistrationForm" class="business-form" data-aos="fade-up" data-aos-delay="200">
+                    <input type="hidden" name="access_key" value="8f5b2c1a-4d3e-9f8b-7c6a-5e4d3c2b1a90">
+                    <input type="hidden" name="subject" value="Business Registration - Helensvale Connect">
+                    <input type="hidden" name="from_name" value="Helensvale Connect Business Registration">
+                    <input type="hidden" name="plan_type" id="selectedBusinessPlan" value="growth">
+                    
+                    <!-- Business Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">Business Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="businessName">Business Name</label>
+                                <input type="text" id="businessName" name="business_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessType">Business Type</label>
+                                <select id="businessType" name="business_type" required>
+                                    <option value="">Select business type</option>
+                                    <option value="retail">Retail Store</option>
+                                    <option value="restaurant">Restaurant/Food Service</option>
+                                    <option value="fashion">Fashion & Clothing</option>
+                                    <option value="electronics">Electronics & Technology</option>
+                                    <option value="beauty">Beauty & Personal Care</option>
+                                    <option value="automotive">Automotive</option>
+                                    <option value="home-garden">Home & Garden</option>
+                                    <option value="services">Professional Services</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessDescription">Business Description</label>
+                                <textarea id="businessDescription" name="business_description" rows="3" placeholder="Brief description of your business and products/services" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Owner Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">Owner Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="ownerName">Full Name</label>
+                                <input type="text" id="ownerName" name="owner_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerEmail">Email Address</label>
+                                <input type="email" id="ownerEmail" name="owner_email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerPhone">Phone Number</label>
+                                <input type="tel" id="ownerPhone" name="owner_phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessRegistration">Business Registration Number (Optional)</label>
+                                <input type="text" id="businessRegistration" name="business_registration" placeholder="If registered with government">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">Business Location</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="businessCity">City</label>
+                                <select id="businessCity" name="business_city" required>
+                                    <option value="">Select your city</option>
+                                    <option value="harare">Harare</option>
+                                    <option value="bulawayo">Bulawayo</option>
+                                    <option value="mutare">Mutare</option>
+                                    <option value="gweru">Gweru</option>
+                                    <option value="kwekwe">Kwekwe</option>
+                                    <option value="masvingo">Masvingo</option>
+                                    <option value="chinhoyi">Chinhoyi</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessSuburb">Suburb/Area</label>
+                                <select id="businessSuburb" name="business_suburb" required>
+                                    <option value="">Select your suburb</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="businessAddress">Business Address</label>
+                                <input type="text" id="businessAddress" name="business_address" placeholder="Street address of your business" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="form-section payment-section" id="businessPaymentSection">
+                        <h3 class="section-title">Payment Information</h3>
+                        <div class="payment-summary">
+                            <div class="summary-item">
+                                <span id="planNameDisplay">Growth Business Plan</span>
+                                <span class="amount" id="planPriceDisplay">39.99$/month</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total</span>
+                                <span class="amount" id="totalPriceDisplay">39.99$</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <h4>Payment Method</h4>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="ecocash" required>
+                                    <div class="option-content">
+                                        <img src="./assets/ecocash-logo.svg" alt="EcoCash" class="payment-logo">
+                                        <span>EcoCash</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="onemoney" required>
+                                    <div class="option-content">
+                                        <img src="./assets/onemoney-logo.svg" alt="OneMoney" class="payment-logo">
+                                        <span>OneMoney</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="card" required>
+                                    <div class="option-content">
+                                        <img src="./assets/mastercard-logo.svg" alt="Card" class="payment-logo">
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="form-section">
+                        <div class="terms-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span class="terms-text">
+                                    I agree to the <a href="#" class="terms-link">Terms of Service</a> and 
+                                    <a href="#" class="terms-link">Privacy Policy</a>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="marketing">
+                                <span class="checkmark"></span>
+                                <span class="terms-text">
+                                    I want to receive marketing updates and business growth tips
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn" id="businessSubmitBtn">
+                            <span class="btn-text">Start Growing Your Business</span>
+                            <span class="btn-price" id="businessBtnPrice">39.99$</span>
+                        </button>
+                        <div class="security-note">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your business information is secure and encrypted</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Success Stories Section -->
+    <section class="success-stories-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Join Zimbabwe's Business Success Stories</h2>
+                <p class="section-description">Real businesses achieving extraordinary growth on our platform</p>
+            </div>
+            
+            <div class="success-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="success-card">
+                    <div class="success-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">340%</span>
+                            <span class="stat-label">Revenue Growth</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Months</span>
+                        </div>
+                    </div>
+                    <div class="success-content">
+                        <h4>Fashion Boutique</h4>
+                        <p>"From 2,000$ to 8,800$ monthly revenue in just 6 months. The premium customer base is incredible."</p>
+                        <div class="business-type">Fashion & Retail</div>
+                    </div>
+                </div>
+                
+                <div class="success-card">
+                    <div class="success-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">280%</span>
+                            <span class="stat-label">Customer Growth</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Months</span>
+                        </div>
+                    </div>
+                    <div class="success-content">
+                        <h4>Electronics Store</h4>
+                        <p>"Went from 50 to 190 regular customers. The platform's targeting is phenomenal."</p>
+                        <div class="business-type">Electronics</div>
+                    </div>
+                </div>
+                
+                <div class="success-card">
+                    <div class="success-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">420%</span>
+                            <span class="stat-label">Order Volume</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Months</span>
+                        </div>
+                    </div>
+                    <div class="success-content">
+                        <h4>Restaurant Chain</h4>
+                        <p>"From 30 to 156 daily orders. Our delivery business exploded thanks to the affluent customer base."</p>
+                        <div class="business-type">Food Service</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Benefits Section -->
+    <section class="business-benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Premium Customer Base</h3>
+                    <p>Access Zimbabwe's most affluent customers with 3x higher spending power than average marketplace users.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Proven Growth Results</h3>
+                    <p>Average 240% revenue increase within 6 months. Our businesses consistently outperform traditional channels.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Elite Marketplace Position</h3>
+                    <p>Stand out in Zimbabwe's most prestigious business directory with premium branding and visibility.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Marketing Automation</h3>
+                    <p>AI-powered marketing tools that automatically target your ideal customers and optimize your campaigns.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Transaction Protection</h3>
+                    <p>Secure payment processing with fraud protection and guaranteed transaction security for peace of mind.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Personal business growth consultant and priority support to help you maximize your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Messages -->
+    <div id="alertContainer" class="alert-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./assets/logo.svg" alt="Helensvale Connect" class="footer-logo">
+                    <p>Zimbabwe's premier business marketplace connecting affluent customers with quality businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="features.html">Features</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="partnerships.html">Partners</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">About</a>
+                        <a href="guides.html">Guides</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Helensvale Connect. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/business-registration.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

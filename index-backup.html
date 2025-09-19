@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helensvale Connect - Zimbabwe's Revolutionary Marketplace | Launching Soon</title>
+    <meta name="description" content="The marketplace that will change how Zimbabwe shops forever. Join 15,000+ early adopters waiting for the most anticipated platform launch of 2025.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    <link rel="stylesheet" href="./css/next-gen-styles.css">
+</head>
+<body>
+    <!-- Dynamic Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="./assets/logo.svg" alt="Helensvale Connect" class="logo">
+                <span class="brand-text">Helensvale Connect</span>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="nav-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="customer-registration.html" class="nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Join as Customer</span>
+                </a>
+                <a href="business-registration.html" class="nav-link">
+                    <i class="fas fa-store"></i>
+                    <span>Join as Business</span>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="guides.html" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </a>
+                        <a href="faq.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Help</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-cta">
+                <a href="#early-access" class="btn btn-primary">Get Early Access</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Enhanced Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h4>Platform</h4>
+                <a href="index.html" class="sidebar-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="sidebar-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Company</h4>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="guides.html" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Guides</span>
+                </a>
+                <a href="faq.html" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="help.html" class="sidebar-link">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="sidebar-cta">
+                <a href="#early-access" class="btn btn-primary btn-full">Get Early Access</a>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next-Gen Hero Section -->
+    <section class="hero next-gen-hero">
+        <div class="hero-background">
+            <div class="animated-gradient"></div>
+            <div class="floating-elements">
+                <div class="float-element" data-speed="2">💎</div>
+                <div class="float-element" data-speed="3">🚀</div>
+                <div class="float-element" data-speed="1.5">⚡</div>
+                <div class="float-element" data-speed="2.5">🌟</div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge pulse-glow">
+                    <span class="badge-icon">🔥</span>
+                    <span class="badge-text">Zimbabwe's #1 Marketplace</span>
+                    <span class="badge-live">LIVE SOON</span>
+                </div>
+                <h1 class="hero-title next-gen-title">
+                    The Future of <span class="gradient-text animated-gradient-text">Commerce</span><br>
+                    <span class="typewriter-text">Starts Here</span>
+                </h1>
+                <p class="hero-description enhanced-description">
+                    🚀 Revolutionary AI-powered marketplace transforming Zimbabwe's digital economy<br>
+                    💎 Join 15,000+ visionaries building the future of African commerce
+                </p>
+                
+                <div class="hero-stats enhanced-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number" data-count="15000">0</div>
+                        <div class="stat-label">Future Users</div>
+                        <div class="stat-growth">+2,547 this week</div>
+                    </div>
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Businesses Ready</div>
+                        <div class="stat-growth">+89 today</div>
+                    </div>
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% Pre-Satisfaction</div>
+                        <div class="stat-growth">Beta feedback</div>
+                    </div>
+                </div>
+            
+            <div class="hero-cta animate-fade-in-up" data-aos="fade-up" data-aos-delay="600">
+                <a href="#early-access" class="btn btn-primary btn-large btn-animated hover-lift">Get Early Access</a>
+                <a href="#how-it-works" class="btn btn-secondary btn-large hover-scale">Learn More</a>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container" data-aos="fade-up" data-aos-delay="1000">
+                <h3 class="countdown-title">Official Launch Countdown</h3>
+                <div class="hero-cta next-gen-cta" data-aos="fade-up" data-aos-delay="400">
+                    <button class="cta-button primary quantum-button" onclick="scrollToEarlyAccess()">
+                        <span class="button-bg-effect"></span>
+                        <span class="button-text">🚀 Secure Your Spot</span>
+                        <span class="button-subtext">Limited Early Access</span>
+                    </button>
+                    <button class="cta-button secondary glass-button" onclick="openLearnMore()">
+                        <span class="button-text">🎯 See the Future</span>
+                        <span class="button-subtext">Interactive Demo</span>
+                    </button>
+                </div>
+                
+                <div class="hero-social-proof" data-aos="fade-up" data-aos-delay="600">
+                    <div class="social-proof-avatars">
+                        <div class="avatar-stack">
+                            <div class="avatar">👨‍💼</div>
+                            <div class="avatar">👩‍💻</div>
+                            <div class="avatar">👨‍🎨</div>
+                            <div class="avatar">👩‍🔬</div>
+                            <div class="avatar-more">+15K</div>
+                        </div>
+                    </div>
+                    <p class="social-proof-text">
+                        <strong>15,000+ innovators</strong> are already building the future with us
+                    </p>
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">14</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problems" class="problems-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">The Zimbabwe Shopping Struggle is Real</h2>
+                <p class="section-subtitle">
+                    We've all been there. The endless journeys, the wasted time, the frustration. 
+                    It's time for a change.
+                </p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon"><i class="fas fa-bus"></i></div>
+                    <h3 class="problem-title">Transport Nightmare</h3>
+                    <p class="problem-description">
+                        Spending hours in kombis, dealing with unreliable transport, and high fuel costs 
+                        just to buy basic items. Your time is worth more than this.
+                    </p>
+                    <div class="problem-stat">
+                        <span class="stat-number">3+ hours</span>
+                        <span class="stat-label">Average shopping trip</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon"><i class="fas fa-search"></i></div>
+                    <h3 class="problem-title">Endless Searching</h3>
+                    <p class="problem-description">
+                        Visiting multiple shops, calling around, asking friends. Finding what you need 
+                        shouldn't feel like a treasure hunt in 2025.
+                    </p>
+                    <div class="problem-stat">
+                        <span class="stat-number">5-8</span>
+                        <span class="stat-label">Shops visited per item</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="problem-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3 class="problem-title">Hidden Costs</h3>
+                    <p class="problem-description">
+                        Transport costs, time off work, meals while shopping. The "cheap" item 
+                        becomes expensive when you factor in the real cost of getting it.
+                    </p>
+                    <div class="problem-stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Hidden cost markup</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="problem-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="problem-title">Trust Issues</h3>
+                    <p class="problem-description">
+                        No reviews, no guarantees, no comeback if something goes wrong. 
+                        Shopping feels like gambling with your hard-earned money.
+                    </p>
+                    <div class="problem-stat">
+                        <span class="stat-number">73%</span>
+                        <span class="stat-label">Fear online fraud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Early Access Form -->
+    <section id="early-access" class="early-access-section">
+        <div class="container">
+            <div class="early-access-content">
+                <div class="early-access-text" data-aos="fade-right">
+                    <h2 class="section-title">
+                        Join the Revolution<br>
+                        <span class="gradient-text">Before Everyone Else</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Be among the first users to experience Zimbabwe's new digital marketplace. Early adopters get exclusive benefits and priority access.
+                    </p>
+                    
+                    <!-- Role Selection -->
+                    <div class="role-selection" data-aos="fade-up" data-aos-delay="100">
+                        <h4>🚀 Join Zimbabwe's Next-Generation Marketplace</h4>
+                        <p class="role-subtitle">Choose how you want to be part of our launch in 21 days</p>
+                        <div class="role-buttons">
+                            <a href="customer-registration.html" class="role-btn customer-btn">
+                                <div class="role-icon">👤</div>
+                                <div class="role-info">
+                                    <h5>Join as Customer</h5>
+                                    <p>Shop and discover amazing products</p>
+                                    <div class="role-options-inline">
+                                        <span class="option-free">Free Registration</span>
+                                        <span class="option-premium">Premium $1.99/month</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="business-registration.html" class="role-btn business-btn">
+                                <div class="role-icon">🏪</div>
+                                <div class="role-info">
+                                    <h5>Join as Business</h5>
+                                    <p>Sell and grow your business</p>
+                                    <div class="role-options-inline">
+                                        <span class="option-free">Free Setup</span>
+                                        <span class="option-premium">Premium Packages</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="launch-countdown">
+                            <div class="countdown-label">🚀 Launching in:</div>
+                            <div class="countdown-timer" id="launchCountdown">
+                                <div class="time-unit">
+                                    <span class="time-number" id="countdownDays">21</span>
+                                    <span class="time-label">Days</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number" id="countdownHours">00</span>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-unit">
+                                    <span class="time-number" id="countdownMinutes">00</span>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Benefits Display -->
+                    <div class="role-benefits" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>VIP Shopping Lane</h4>
+                                <p>Skip the queue with priority order processing</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Insider Pricing</h4>
+                                <p>Access to member-only deals before anyone else</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Personal Shopping Assistant</h4>
+                                <p>AI-powered recommendations just for you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="early-access-form" data-aos="fade-left">
+                    <form id="earlyAccessForm" class="registration-form clean-form" novalidate>
+                        <div class="form-header">
+                            <h3>🚀 Secure Your Spot</h3>
+                            <p>Join <span class="registration-count">15,000</span>+ innovators building Zimbabwe's future</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required class="form-input" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required class="form-input" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <select name="role" class="form-select" autocomplete="organization-title">
+                                <option value="user">Join as Customer</option>
+                                <option value="business">Join as Business</option>
+                                <option value="partner">Join as Partner</option>
+                            </select>
+                        </div>
+                        <div class="business-fields">
+                            <div class="form-group">
+                                <input type="text" name="businessName" placeholder="Business Name" class="form-input">
+                            </div>
+                        </div>
+                        
+                        <!-- Hidden role field -->
+                        </p>
+                        
+                        <!-- Role Selection -->
+                        <div class="role-selection" data-aos="fade-up" data-aos-delay="100">
+                            <h4>I'm joining as a:</h4>
+                            <div class="role-options">
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="customer" checked>
+                                    <div class="role-card">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Customer</span>
+                                        <small>Shop & discover</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="business">
+                                    <div class="role-card">
+                                        <i class="fas fa-store"></i>
+                                        <span>Business</span>
+                                        <small>Sell & grow</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="entrepreneur">
+                                    <div class="role-card">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Entrepreneur</span>
+                                        <small>Start & scale</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="delivery">
+                                    <div class="role-card">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <span>Delivery Partner</span>
+                                        <small>Drive & earn</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Benefits Display -->
+                        <div class="role-benefits" data-aos="fade-up" data-aos-delay="200">
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>VIP Shopping Lane</h4>
+                                    <p>Skip the queue with priority order processing</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Insider Pricing</h4>
+                                    <p>Access to member-only deals before anyone else</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Personal Shopping Assistant</h4>
+                                    <p>AI-powered recommendations just for you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="early-access-form" data-aos="fade-left">
+                        <form id="earlyAccessForm" class="registration-form clean-form" novalidate>
+                            <div class="form-header">
+                                <h3>🚀 Secure Your Spot</h3>
+                                <p>Join <span class="registration-count">15,000</span>+ innovators building Zimbabwe's future</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required class="form-input" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required class="form-input" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <select name="role" class="form-select" autocomplete="organization-title">
+                                    <option value="user">Join as Customer</option>
+                                    <option value="business">Join as Business</option>
+                                    <option value="partner">Join as Partner</option>
+                                </select>
+                            </div>
+                            <div class="business-fields">
+                                <div class="form-group">
+                                    <input type="text" name="businessName" placeholder="Business Name" class="form-input">
+                                </div>
+                            </div>
+                            
+                            <!-- Hidden role field -->
+                            <input type="hidden" name="role" value="customer" class="role-selector">
+                            
+                            <!-- Honeypot for spam protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                            <button type="submit" class="btn btn-primary btn-full btn-animated hover-lift">
+                                <span class="button-text">Secure My Spot</span>
+                                <span class="button-icon">✨</span>
+                            </button>
+                            <p class="form-privacy">🔒 We respect your privacy. No spam, ever.</p>
+                            <p class="form-disclaimer">
+                                By joining, you agree to receive updates about Helensvale Connect. Unsubscribe anytime.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./assets/logo.svg" alt="Helensvale Connect" class="footer-logo">
+                    <p class="footer-description">
+                        Connecting Zimbabwe, one tap at a time.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/helensvale.connect" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <a href="features.html">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="partnerships.html">Partners</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mailto:helensvaleconnect@gmail.com">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/countdown-timer.js"></script>
+    <script src="js/dynamic-pricing.js"></script>
+    <script src="js/learn-more.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/ux-enhancements.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="./js/paynow.js"></script>
+</body>
+</html>
