@@ -399,76 +399,141 @@
                 </div>
                 
                 <div class="early-access-form" data-aos="fade-left">
-                    <form id="earlyAccessForm" class="registration-form" data-validate>
+                    <form id="earlyAccessForm" class="registration-form clean-form" novalidate>
                         <div class="form-header">
-                            <h3>Get Priority Access</h3>
-                            <p>Join <span class="registration-count">15,000</span>+ Zimbabweans already on the list</p>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullName">Full Name</label>
-                                <input type="text" id="fullName" name="fullName" data-validate="required|name" data-format="capitalize" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" data-validate="required|email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+263 77 123 4567" data-validate="required|phone" data-format="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="role">I'm interested as a:</label>
-                                <select id="role" name="role" data-validate="required" required>
-                                    <option value="">Select your role</option>
-                                    <option value="customer">Customer</option>
-                                    <option value="business">Business Owner</option>
-                                    <option value="delivery">Delivery Partner</option>
-                                </select>
-                            </div>
+                            <h3>🚀 Secure Your Spot</h3>
+                            <p>Join <span class="registration-count">15,000</span>+ innovators building Zimbabwe's future</p>
                         </div>
                         
                         <div class="form-group">
-                            <label for="city">City</label>
-                            <select name="city" id="city" data-validate="required" required>
-                                <option value="">Select your city</option>
-                                <option value="harare">Harare</option>
-                                <option value="bulawayo">Bulawayo</option>
-                                <option value="chitungwiza">Chitungwiza</option>
-                                <option value="mutare">Mutare</option>
-                                <option value="gweru">Gweru</option>
-                                <option value="kwekwe">Kwekwe</option>
-                                <option value="kadoma">Kadoma</option>
-                                <option value="masvingo">Masvingo</option>
-                                <option value="chinhoyi">Chinhoyi</option>
-                                <option value="norton">Norton</option>
-                                <option value="marondera">Marondera</option>
-                                <option value="ruwa">Ruwa</option>
-                                <option value="victoria-falls">Victoria Falls</option>
-                                <option value="bindura">Bindura</option>
-                                <option value="zvishavane">Zvishavane</option>
-                                <option value="other">Other</option>
+                            <input type="text" name="name" placeholder="Your Name" required class="form-input" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required class="form-input" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <select name="role" class="form-select" autocomplete="organization-title">
+                                <option value="user">Join as Customer</option>
+                                <option value="business">Join as Business</option>
+                                <option value="partner">Join as Partner</option>
                             </select>
+                        </div>
+                        <div class="business-fields">
+                            <div class="form-group">
+                                <input type="text" name="businessName" placeholder="Business Name" class="form-input">
+                            </div>
                         </div>
                         
                         <!-- Hidden role field -->
-                        <input type="hidden" name="role" value="customer" class="role-selector">
-                        
-                        <!-- Honeypot for spam protection -->
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i>
-                            Secure My VIP Access
-                        </button>
-                        <p class="form-disclaimer">
-                            By joining, you agree to receive updates about Helensvale Connect. Unsubscribe anytime.
                         </p>
-                    </form>
+                        
+                        <!-- Role Selection -->
+                        <div class="role-selection" data-aos="fade-up" data-aos-delay="100">
+                            <h4>I'm joining as a:</h4>
+                            <div class="role-options">
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="customer" checked>
+                                    <div class="role-card">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Customer</span>
+                                        <small>Shop & discover</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="business">
+                                    <div class="role-card">
+                                        <i class="fas fa-store"></i>
+                                        <span>Business</span>
+                                        <small>Sell & grow</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="entrepreneur">
+                                    <div class="role-card">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Entrepreneur</span>
+                                        <small>Start & scale</small>
+                                    </div>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="roleDisplay" value="delivery">
+                                    <div class="role-card">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <span>Delivery Partner</span>
+                                        <small>Drive & earn</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Benefits Display -->
+                        <div class="role-benefits" data-aos="fade-up" data-aos-delay="200">
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>VIP Shopping Lane</h4>
+                                    <p>Skip the queue with priority order processing</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Insider Pricing</h4>
+                                    <p>Access to member-only deals before anyone else</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Personal Shopping Assistant</h4>
+                                    <p>AI-powered recommendations just for you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="early-access-form" data-aos="fade-left">
+                        <form id="earlyAccessForm" class="registration-form clean-form" novalidate>
+                            <div class="form-header">
+                                <h3>🚀 Secure Your Spot</h3>
+                                <p>Join <span class="registration-count">15,000</span>+ innovators building Zimbabwe's future</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required class="form-input" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required class="form-input" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <select name="role" class="form-select" autocomplete="organization-title">
+                                    <option value="user">Join as Customer</option>
+                                    <option value="business">Join as Business</option>
+                                    <option value="partner">Join as Partner</option>
+                                </select>
+                            </div>
+                            <div class="business-fields">
+                                <div class="form-group">
+                                    <input type="text" name="businessName" placeholder="Business Name" class="form-input">
+                                </div>
+                            </div>
+                            
+                            <!-- Hidden role field -->
+                            <input type="hidden" name="role" value="customer" class="role-selector">
+                            
+                            <!-- Honeypot for spam protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                            <button type="submit" class="btn btn-primary btn-full btn-animated hover-lift">
+                                <span class="button-text">Secure My Spot</span>
+                                <span class="button-icon">✨</span>
+                            </button>
+                            <p class="form-privacy">🔒 We respect your privacy. No spam, ever.</p>
+                            <p class="form-disclaimer">
+                                By joining, you agree to receive updates about Helensvale Connect. Unsubscribe anytime.
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -534,6 +599,7 @@
     <script src="js/ux-enhancements.js"></script>
     <script src="js/form-validation.js"></script>
     <script src="js/learn-more.js"></script>
+    <script src="js/clean-registration.js"></script>
     <script src="./js/paynow.js"></script>
 </body>
 </html>
