@@ -4,115 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helensvale Connect - Zimbabwe's Revolutionary Marketplace | Launching Soon</title>
-    <meta name="description" content="The marketplace that will change how Zimbabwe shops forever. Join 15,000+ early adopters waiting for the most anticipated platform launch of 2024.">
+    <meta name="description" content="The marketplace that will change how Zimbabwe shops forever. Join 15,000+ early adopters waiting for the most anticipated platform launch of 2025.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/performance.css">
+    <link rel="stylesheet" href="./css/next-gen-styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Dynamic Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
+            <a href="index.html" class="nav-brand">
                 <img src="./assets/logo.svg" alt="Helensvale Connect" class="logo">
                 <span class="brand-text">Helensvale Connect</span>
-            </div>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span><span></span><span></span>
-            </div>
-            <div class="nav-links desktop-nav">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="features.html" class="nav-link">Features</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="partnerships.html" class="nav-link">Partners</a>
-            </div>
-            <div class="nav-cta">
-                <a href="#early-access" class="btn btn-primary">Get Early Access</a>
-            </div>
-        </div>
-        
-        <!-- Mobile Sidebar -->
-        <div class="mobile-sidebar" id="mobileSidebar">
-            <div class="sidebar-header">
-                <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
-                <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="sidebar-content">
-                <div class="sidebar-section">
-                    <h4>Platform</h4>
-                    <a href="features.html" class="sidebar-link">Features</a>
-                    <a href="#how-it-works" class="sidebar-link">How It Works</a>
-                    <a href="pricing.html" class="sidebar-link">Pricing</a>
-                </div>
-                <div class="sidebar-section">
-                    <h4>Company</h4>
-                    <a href="about.html" class="sidebar-link">Our Story</a>
-                    <a href="contact.html" class="sidebar-link">Contact</a>
-                </div>
-                <div class="sidebar-cta">
-                    <a href="#early-access" class="btn btn-primary btn-full">Get Early Access</a>
-                    <div class="social-links">
-                        <a href="https://instagram.com/helensvale.connect" target="_blank" class="social-link">
-                            <i class="fab fa-instagram"></i>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="nav-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="guides.html" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </a>
+                        <a href="faq.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Help</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
                         </a>
                     </div>
                 </div>
             </div>
+            
+            <div class="nav-cta">
+                <a href="#early-access" class="btn btn-primary">Get Early Access</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+    
+    <!-- Enhanced Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h4>Platform</h4>
+                <a href="index.html" class="sidebar-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="sidebar-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Company</h4>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="guides.html" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Guides</span>
+                </a>
+                <a href="faq.html" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="help.html" class="sidebar-link">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="sidebar-cta">
+                <a href="#early-access" class="btn btn-primary btn-full">Get Early Access</a>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Next-Gen Hero Section -->
+    <section class="hero next-gen-hero">
         <div class="hero-background">
+            <div class="animated-gradient"></div>
+            <div class="floating-elements">
+                <div class="float-element" data-speed="2">💎</div>
+                <div class="float-element" data-speed="3">🚀</div>
+                <div class="float-element" data-speed="1.5">⚡</div>
+                <div class="float-element" data-speed="2.5">🌟</div>
+            </div>
             <div class="hero-overlay"></div>
         </div>
-        
-        <div class="container hero-content">
-            <div class="hero-badge" data-aos="fade-down">
-                <span class="badge-text">🇿🇼 Made for Zimbabwe</span>
-                <span class="badge-highlight">Launching in 14 Days</span>
-            </div>
-            
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                Everything You Need,<br>
-                <span class="gradient-text">3 Taps Away</span>
-            </h1>
-            
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
-                Zimbabwe's upcoming digital marketplace connecting local businesses with their communities. Join 2,500+ early adopters preparing for launch.
-            </p>
-            
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
-                <div class="stat">
-                    <div class="stat-number">2,500+</div>
-                    <div class="stat-label">Pre-Registrations</div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge pulse-glow">
+                    <span class="badge-icon">🔥</span>
+                    <span class="badge-text">Zimbabwe's #1 Marketplace</span>
+                    <span class="badge-live">LIVE SOON</span>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-label">Businesses Interested</div>
+                <h1 class="hero-title next-gen-title">
+                    The Future of <span class="gradient-text animated-gradient-text">Commerce</span><br>
+                    <span class="typewriter-text">Starts Here</span>
+                </h1>
+                <p class="hero-description enhanced-description">
+                    🚀 Revolutionary AI-powered marketplace transforming Zimbabwe's digital economy<br>
+                    💎 Join 15,000+ visionaries building the future of African commerce
+                </p>
+                
+                <div class="hero-stats enhanced-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number" data-count="15000">0</div>
+                        <div class="stat-label">Future Users</div>
+                        <div class="stat-growth">+2,547 this week</div>
+                    </div>
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Businesses Ready</div>
+                        <div class="stat-growth">+89 today</div>
+                    </div>
+                    <div class="stat-item glow-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% Pre-Satisfaction</div>
+                        <div class="stat-growth">Beta feedback</div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Major Cities</div>
-                </div>
-            </div>
             
-            <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
-                <a href="#early-access" class="btn btn-primary btn-large">
-                    <i class="fas fa-rocket"></i>
-                    Get Priority Access
-                </a>
-                <a href="#how-it-works" class="btn btn-secondary btn-large">
-                    <i class="fas fa-play"></i>
-                    See How It Works
-                </a>
+            <div class="hero-cta animate-fade-in-up" data-aos="fade-up" data-aos-delay="600">
+                <a href="#early-access" class="btn btn-primary btn-large btn-animated hover-lift">Get Early Access</a>
+                <a href="#how-it-works" class="btn btn-secondary btn-large hover-scale">Learn More</a>
             </div>
             
             <!-- Countdown Timer -->
             <div class="countdown-container" data-aos="fade-up" data-aos-delay="1000">
                 <h3 class="countdown-title">Official Launch Countdown</h3>
+                <div class="hero-cta next-gen-cta" data-aos="fade-up" data-aos-delay="400">
+                    <button class="cta-button primary quantum-button" onclick="scrollToEarlyAccess()">
+                        <span class="button-bg-effect"></span>
+                        <span class="button-text">🚀 Secure Your Spot</span>
+                        <span class="button-subtext">Limited Early Access</span>
+                    </button>
+                    <button class="cta-button secondary glass-button" onclick="openLearnMore()">
+                        <span class="button-text">🎯 See the Future</span>
+                        <span class="button-subtext">Interactive Demo</span>
+                    </button>
+                </div>
+                
+                <div class="hero-social-proof" data-aos="fade-up" data-aos-delay="600">
+                    <div class="social-proof-avatars">
+                        <div class="avatar-stack">
+                            <div class="avatar">👨‍💼</div>
+                            <div class="avatar">👩‍💻</div>
+                            <div class="avatar">👨‍🎨</div>
+                            <div class="avatar">👩‍🔬</div>
+                            <div class="avatar-more">+15K</div>
+                        </div>
+                    </div>
+                    <p class="social-proof-text">
+                        <strong>15,000+ innovators</strong> are already building the future with us
+                    </p>
+                </div>
                 <div class="countdown" id="countdown">
                     <div class="countdown-item">
                         <span class="countdown-number" id="days">14</span>
@@ -165,7 +283,7 @@
                     <h3 class="problem-title">Endless Searching</h3>
                     <p class="problem-description">
                         Visiting multiple shops, calling around, asking friends. Finding what you need 
-                        shouldn't feel like a treasure hunt in 2024.
+                        shouldn't feel like a treasure hunt in 2025.
                     </p>
                     <div class="problem-stat">
                         <span class="stat-number">5-8</span>
@@ -281,19 +399,42 @@
                 </div>
                 
                 <div class="early-access-form" data-aos="fade-left">
-                    <form id="earlyAccessForm" class="registration-form">
+                    <form id="earlyAccessForm" class="registration-form" data-validate>
                         <div class="form-header">
                             <h3>Get Priority Access</h3>
                             <p>Join <span class="registration-count">15,000</span>+ Zimbabweans already on the list</p>
                         </div>
                         
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your full name" required>
-                            <input type="email" name="email" placeholder="Enter your email address" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" data-validate="required|name" data-format="capitalize" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" data-validate="required|email" required>
+                            </div>
                         </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+263 77 123 4567" data-validate="required|phone" data-format="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="role">I'm interested as a:</label>
+                                <select id="role" name="role" data-validate="required" required>
+                                    <option value="">Select your role</option>
+                                    <option value="customer">Customer</option>
+                                    <option value="business">Business Owner</option>
+                                    <option value="delivery">Delivery Partner</option>
+                                </select>
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone number (optional)">
-                            <select name="city" required>
+                            <label for="city">City</label>
+                            <select name="city" id="city" data-validate="required" required>
                                 <option value="">Select your city</option>
                                 <option value="harare">Harare</option>
                                 <option value="bulawayo">Bulawayo</option>
@@ -378,14 +519,21 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
+                <p>&copy; 2025 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/registration.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/paynow.js"></script>
+    <script src="js/dynamic-pricing.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/ux-enhancements.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/learn-more.js"></script>
     <script src="./js/paynow.js"></script>
 </body>
 </html>

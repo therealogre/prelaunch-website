@@ -238,7 +238,7 @@ function getRoleBenefits(role) {
         delivery: [
             {
                 title: "Premium Partner Status",
-                description: "Higher commission rates and priority job assignments"
+                description: "30% commission rates and priority job assignments"
             },
             {
                 title: "Professional Driver Kit",

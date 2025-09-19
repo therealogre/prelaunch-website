@@ -225,7 +225,7 @@ function showPartnershipSuccess(type) {
             title = 'Welcome to the Delivery Team!';
             message = 'Your application has been received. We\'ll contact you within 48 hours to complete your onboarding.';
             benefits = [
-                '25% commission on every delivery',
+                '30% commission on every delivery',
                 'Flexible working hours',
                 'Zone exclusivity in your area',
                 'Free delivery app with GPS'
@@ -235,9 +235,9 @@ function showPartnershipSuccess(type) {
             title = 'Welcome to the Influencer Program!';
             message = 'Your application is under review. We\'ll send you your unique referral code and marketing materials soon.';
             benefits = [
-                '15% lifetime commission on referrals',
-                '$50 bonus per business you bring',
-                'Performance bonuses up to $1,000',
+                '30% commission on referrals',
+                'Marketing support and tracking tools',
+                'Performance bonuses available',
                 'Free content creation support'
             ];
             break;

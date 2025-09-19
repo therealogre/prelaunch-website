@@ -4,33 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Helensvale Connect</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/performance.css">
+    <link rel="stylesheet" href="css/next-gen-styles.css">
+    <link rel="stylesheet" href="./css/animations.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Dynamic Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="./assets/logo.svg" alt="Helensvale Connect">
-                <span>Helensvale Connect</span>
+            <a href="index.html" class="nav-brand">
+                <img src="./assets/logo.svg" alt="Helensvale Connect" class="logo">
+                <span class="brand-text">Helensvale Connect</span>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="nav-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="guides.html" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </a>
+                        <a href="faq.html" class="dropdown-item active">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Help</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span><span></span><span></span>
-            </div>
-            <div class="nav-links desktop-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="features.html" class="nav-link">Features</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="partnerships.html" class="nav-link">Partners</a>
-                <a href="about.html" class="nav-link">About</a>
-            </div>
+            
             <div class="nav-cta">
                 <a href="index.html#early-access" class="btn btn-primary">Get Early Access</a>
             </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+    
+    <!-- Enhanced Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h4>Platform</h4>
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="sidebar-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Company</h4>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="guides.html" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Guides</span>
+                </a>
+                <a href="faq.html" class="sidebar-link active">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="help.html" class="sidebar-link">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="sidebar-cta">
+                <a href="index.html#early-access" class="btn btn-primary btn-full">Get Early Access</a>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -69,7 +185,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>We're currently in pre-launch phase with early access registration open. Full platform launch is planned for Q2 2024. Early access members will get priority access and special pricing when we go live.</p>
+                            <p>We're currently in pre-launch phase with early access registration open. Full platform launch is planned for Q2 2025. Early access members will get priority access and special pricing when we go live.</p>
                         </div>
                     </div>
                     
@@ -360,31 +476,36 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
+                <p>&copy; 2025 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/scroll-animations.js"></script>
     <script>
-        // FAQ accordion functionality
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // FAQ Accordion functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;
-                const answer = faqItem.querySelector('.faq-answer');
-                const icon = question.querySelector('i');
+                const isActive = faqItem.classList.contains('active');
                 
-                // Toggle active state
-                faqItem.classList.toggle('active');
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
                 
-                // Toggle answer visibility
-                if (faqItem.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    answer.style.maxHeight = '0';
-                    icon.style.transform = 'rotate(0deg)';
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
                 }
             });
         });

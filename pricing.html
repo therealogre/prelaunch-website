@@ -4,53 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Helensvale Connect | Zimbabwe's Revolutionary Marketplace</title>
-    <meta name="description" content="Choose the perfect plan for your business. From free listings to premium growth tools, we have options for every Zimbabwe business.">
+    <meta name="description" content="Transparent, competitive pricing designed for Zimbabwe businesses. Start free, scale smart with our psychological pricing strategy.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/performance.css">
 </head>
 <body>
-    <!-- Navigation (same as index.html) -->
+    <!-- Dynamic Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
+            <a href="index.html" class="nav-brand">
                 <img src="./assets/logo.svg" alt="Helensvale Connect" class="logo">
                 <span class="brand-text">Helensvale Connect</span>
+            </a>
+            
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="nav-link active">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="guides.html" class="dropdown-item">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </a>
+                        <a href="faq.html" class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <a href="help.html" class="dropdown-item">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Help</span>
+                        </a>
+                        <a href="contact.html" class="dropdown-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="nav-links desktop-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="partnerships.html" class="nav-link">Partners</a>
-                <a href="guides.html" class="nav-link">Guides</a>
-            </div>
+            
             <div class="nav-cta">
                 <a href="index.html#early-access" class="btn btn-primary">Get Early Access</a>
             </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+    
+    <!-- Enhanced Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <img src="./assets/logo.svg" alt="Helensvale Connect" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h4>Platform</h4>
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="features.html" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Features</span>
+                </a>
+                <a href="pricing.html" class="sidebar-link active">
+                    <i class="fas fa-tag"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="partnerships.html" class="sidebar-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Company</h4>
+                <a href="about.html" class="sidebar-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="guides.html" class="sidebar-link">
+                    <i class="fas fa-book"></i>
+                    <span>Guides</span>
+                </a>
+                <a href="faq.html" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="help.html" class="sidebar-link">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="sidebar-cta">
+                <a href="index.html#early-access" class="btn btn-primary btn-full">Get Early Access</a>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Pricing Hero -->
     <section class="pricing-hero">
         <div class="container">
             <div class="pricing-hero-content" data-aos="fade-up">
-                <h1 class="hero-title">
-                    Simple, Transparent Pricing<br>
-                    <span class="gradient-text">Built for Zimbabwe</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Start free, grow with confidence. No hidden fees, no surprises. 
-                    Just honest pricing that helps your business thrive.
-                </p>
+                <div class="hero-badge animate-fade-in-down">
+                    <span class="badge-text">🇿🇼 Built for Zimbabwe</span>
+                </div>
+                <h1 class="pricing-title animate-fade-in-up text-gradient-animate">Revolutionary Pricing for Revolutionary Results</h1>
+                <p class="pricing-subtitle">Transparent, competitive rates designed specifically for Zimbabwe's growing digital economy. Start free, scale smart.</p>
+                
+                <!-- Market Comparison -->
+                <div class="market-comparison" data-aos="fade-up" data-aos-delay="200">
+                    <div class="comparison-item">
+                        <span class="competitor">Other Platforms</span>
+                        <span class="rate">8-15% + fees</span>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="comparison-item highlight">
+                        <span class="competitor">Helensvale Connect</span>
+                        <span class="rate">2.9% + transparent fees</span>
+                    </div>
+                </div>
                 
                 <!-- Pricing Toggle -->
-                <div class="pricing-toggle">
+                <div class="pricing-toggle" data-aos="fade-up" data-aos-delay="400">
                     <span class="toggle-label">Monthly</span>
                     <label class="toggle-switch">
                         <input type="checkbox" id="pricingToggle">
                         <span class="slider"></span>
                     </label>
-                    <span class="toggle-label">Yearly <span class="save-badge">Save 30%</span></span>
+                    <span class="toggle-label">Annual <span class="discount-badge">Save 25%</span></span>
                 </div>
             </div>
         </div>
@@ -60,72 +187,84 @@
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="pricing-grid">
-                <!-- Starter Plan -->
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <!-- Free Plan -->
+                <div class="pricing-card starter-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="plan-header">
-                        <h3 class="plan-name">Starter</h3>
-                        <p class="plan-description">Perfect for new businesses getting started</p>
-                        <div class="plan-price">
+                        <div class="plan-badge">Most Popular</div>
+                        <h3 class="plan-name">Free Forever</h3>
+                        <p class="plan-description">Perfect for testing the waters - no strings attached</p>
+                    </div>
+                    
+                    <div class="plan-pricing">
+                        <div class="price-display">
                             <span class="currency">$</span>
                             <span class="amount monthly-price">0</span>
-                            <span class="amount yearly-price" style="display: none;">0</span>
+                            <span class="amount annual-price" style="display: none;">0</span>
                             <span class="period">/month</span>
                         </div>
-                        <div class="price-highlight">Free for first 1,000 businesses</div>
+                        <div class="price-comparison">
+                            <span class="original-price">Worth $29.99</span>
+                            <span class="savings">You save 100%</span>
+                        </div>
                     </div>
                     
                     <div class="plan-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Basic business profile</span>
+                            <span>Professional business profile</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Up to 10 product listings</span>
+                            <span>Up to 25 product listings</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Customer reviews & ratings</span>
+                            <span>Real-time customer messaging</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Basic analytics</span>
+                            <span>Basic analytics dashboard</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>EcoCash & OneMoney payments</span>
+                            <span>Mobile money integration</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Email support</span>
+                        <div class="feature-item limited">
+                            <i class="fas fa-clock"></i>
+                            <span>Community support (48h response)</span>
                         </div>
                     </div>
                     
-                    <div class="plan-cta">
-                        <a href="index.html#early-access" class="btn btn-secondary btn-full">Get Started Free</a>
+                    <button class="plan-button btn-animated hover-lift">Start Free Today</button>
                     </div>
                 </div>
 
-                <!-- Growth Plan -->
-                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="400">
-                    <div class="popular-badge">Most Popular</div>
+                <!-- Growth Plan (Decoy) -->
+                <div class="pricing-card decoy-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="plan-header">
                         <h3 class="plan-name">Growth</h3>
-                        <p class="plan-description">For businesses ready to scale and grow</p>
+                        <p class="plan-description">Good for growing businesses</p>
                         <div class="plan-price">
                             <span class="currency">$</span>
-                            <span class="amount monthly-price">29</span>
-                            <span class="amount yearly-price" style="display: none;">20</span>
-                            <span class="period monthly-period">/month</span>
-                            <span class="period yearly-period" style="display: none;">/month (billed yearly)</span>
+                            <span class="amount monthly-price">49</span>
+                            <span class="amount yearly-price" style="display: none;">39</span>
+                            <span class="period monthly-period">.99/month</span>
+                            <span class="period yearly-period" style="display: none;">.99/month (billed yearly)</span>
                         </div>
-                        <p class="plan-note">Everything in Starter, plus:</p>
+                        <div class="price-comparison">
+                            <span class="original-price">Regular $59.99</span>
+                            <span class="savings">Save $10</span>
+                        </div>
                     </div>
                     
                     <div class="plan-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Unlimited product listings</span>
+                            <span>Everything in Free</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Up to 100 product listings</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
@@ -133,23 +272,19 @@
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Priority search placement</span>
+                            <span>Email support (24h response)</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Social media integration</span>
+                            <span>Basic marketing tools</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Inventory management</span>
+                        <div class="feature-item limited">
+                            <i class="fas fa-times"></i>
+                            <span>Priority phone support</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Customer messaging</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Priority support</span>
+                        <div class="feature-item limited">
+                            <i class="fas fa-times"></i>
+                            <span>Unlimited listings</span>
                         </div>
                     </div>
                     
@@ -158,54 +293,63 @@
                     </div>
                 </div>
 
-                <!-- Pro Plan -->
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="600">
+                <!-- Pro Plan (Best Value) -->
+                <div class="pricing-card featured pro-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="popular-badge">Best Value</div>
                     <div class="plan-header">
-                        <h3 class="plan-name">Pro</h3>
-                        <p class="plan-description">For established businesses and enterprises</p>
+                        <h3 class="plan-name">Pro Unlimited</h3>
+                        <p class="plan-description">Everything you need to dominate your market</p>
                         <div class="plan-price">
                             <span class="currency">$</span>
-                            <span class="amount monthly-price">79</span>
-                            <span class="amount yearly-price" style="display: none;">55</span>
-                            <span class="period monthly-period">/month</span>
-                            <span class="period yearly-period" style="display: none;">/month (billed yearly)</span>
+                            <span class="amount monthly-price">39</span>
+                            <span class="amount yearly-price" style="display: none;">29</span>
+                            <span class="period monthly-period">.99/month</span>
+                            <span class="period yearly-period" style="display: none;">.99/month (billed yearly)</span>
                         </div>
-                        <p class="plan-note">Everything in Growth, plus:</p>
+                        <div class="price-comparison">
+                            <span class="original-price">Worth $99.99</span>
+                            <span class="savings">Save 60% - Limited Time!</span>
+                        </div>
                     </div>
                     
                     <div class="plan-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Multi-location management</span>
+                            <span>Everything in Growth + Free</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Advanced marketing tools</span>
+                            <i class="fas fa-infinity"></i>
+                            <span>Unlimited product listings</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Custom branding</span>
+                            <i class="fas fa-rocket"></i>
+                            <span>Advanced AI marketing tools</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>API access</span>
+                            <i class="fas fa-crown"></i>
+                            <span>Premium brand customization</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Dedicated account manager</span>
+                            <i class="fas fa-headset"></i>
+                            <span>Priority phone support (2h response)</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>24/7 phone support</span>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Advanced analytics & reporting</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>Custom integrations</span>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile app integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Transaction protection & insurance</span>
                         </div>
                     </div>
                     
                     <div class="plan-cta">
-                        <a href="index.html#early-access" class="btn btn-secondary btn-full">Go Pro</a>
+                        <a href="index.html#early-access" class="btn btn-primary btn-full btn-animated hover-lift">Start Pro Today</a>
+                        <p class="guarantee">🛡️ 30-day money-back guarantee</p>
                     </div>
                 </div>
             </div>
@@ -342,12 +486,23 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
+                <p>&copy; 2025 Helensvale Connect. Made with ❤️ for Zimbabwe.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/pricing.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dynamic-pricing.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/ux-enhancements.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 </body>
 </html>
