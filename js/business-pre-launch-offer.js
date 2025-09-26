@@ -61,15 +61,26 @@ class BusinessPreLaunchOffer {
         submitBtn.disabled = true;
 
         try {
-            const formData = new FormData(form);
+            // Get form inputs
+            const businessName = document.querySelector('input[placeholder="Business Name"]')?.value || '';
+            const email = document.querySelector('input[type="email"]')?.value || '';
+            const phone = document.querySelector('input[type="tel"]')?.value || '';
+            const productList = form.querySelector('textarea[name="productList"]')?.value || '';
+            const storeTagline = form.querySelector('input[name="storeTagline"]')?.value || '';
+            
+            if (!businessName || !email || !phone || !productList || !storeTagline) {
+                throw new Error('Please fill in all required fields');
+            }
             
             // Store offer data for payment
             const offerData = {
-                email: this.businessInfo.email,
-                businessName: this.businessInfo.businessName,
-                productList: formData.get('productList'),
-                storeTagline: formData.get('storeTagline'),
-                offerType: 'pre_launch_advertising'
+                email: email,
+                phone: phone,
+                businessName: businessName,
+                productList: productList,
+                storeTagline: storeTagline,
+                offerType: 'pre_launch_advertising',
+                timestamp: new Date().toISOString()
             };
             
             localStorage.setItem('pendingOfferData', JSON.stringify(offerData));
@@ -78,7 +89,7 @@ class BusinessPreLaunchOffer {
             this.redirectToPayNow(offerData);
             
         } catch (error) {
-            this.showError(form, 'Submission failed. Please try again.');
+            this.showError(form, error.message || 'Submission failed. Please try again.');
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }
@@ -92,8 +103,23 @@ class BusinessPreLaunchOffer {
             returnurl: `${window.location.origin}/offer-success.html`,
             resulturl: `${window.location.origin}/payment-result.html`,
             authemail: offerData.email,
-            type: 'pre_launch_offer'
+            phone: offerData.phone,
+            business_name: offerData.businessName,
+            type: 'pre_launch_offer',
+            timestamp: new Date().toISOString()
         };
+        
+        // In development, simulate payment success
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            localStorage.setItem('paymentStatus', 'success');
+            localStorage.setItem('paymentDetails', JSON.stringify({
+                ...paymentData,
+                payment_reference: `TEST_${Date.now()}`,
+                payment_date: new Date().toISOString()
+            }));
+            window.location.href = 'offer-success.html';
+            return;
+        }
         
         localStorage.setItem('paymentData', JSON.stringify(paymentData));
         window.location.href = 'payment.html';
