@@ -198,6 +198,45 @@
         </div>
     </section>
 
+    <!-- Commission Structure (No-Cost To You) -->
+    <section class="commission-structure">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Commission-Only Partner Program</h2>
+                <p class="section-subtitle">Zero upfront or monthly costs. Earn on every sale and every conversion you drive.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">🛒</div>
+                    <h3>Sales Commissions</h3>
+                    <p>Earn a percentage on every successful sale attributed to you.</p>
+                    <div class="value-metric">
+                        <span class="metric-number">10–20%</span>
+                        <span class="metric-label">Per sale (tiered)</span>
+                    </div>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">👥</div>
+                    <h3>Conversion Bonuses</h3>
+                    <p>Get paid for verified user signups or paid plan activations you refer.</p>
+                    <div class="value-metric">
+                        <span class="metric-number">$0.50–$5</span>
+                        <span class="metric-label">Per qualified conversion</span>
+                    </div>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">🏅</div>
+                    <h3>Founding Partner Perks</h3>
+                    <p>Priority placements, early access, and a permanent "Founding Partner" badge at launch.</p>
+                    <div class="value-metric">
+                        <span class="metric-number">Launch</span>
+                        <span class="metric-label">Recognition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Partnership Value Proposition -->
     <section class="partnership-value">
         <div class="container">
@@ -430,210 +469,60 @@
         </div>
     </section>
 
-    <!-- Partnership Application Forms -->
+    <!-- Unified Partner Application (Commission-Only) -->
     <section class="partnership-forms">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Ready to Partner with Us?</h2>
-                <p class="section-subtitle">
-                    Choose your partnership type and start your application today
-                </p>
+                <h2 class="section-title">Become a Commission Partner</h2>
+                <p class="section-subtitle">Apply once. We’ll onboard you to earn on every sale and conversion you bring.</p>
             </div>
 
-            <!-- Delivery Partnership Form -->
-            <div id="delivery-form" class="partnership-form-container" data-aos="fade-up">
+            <div id="partner-form" class="partnership-form-container" data-aos="fade-up">
                 <div class="form-header">
-                    <h3>Delivery Partner Application</h3>
-                    <p>Join Zimbabwe's premier delivery network</p>
+                    <h3>Partner Application</h3>
+                    <p>No upfront costs • Transparent commissions • Quick approval</p>
                 </div>
-                
-                <form class="partnership-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                    <input type="hidden" name="subject" value="Delivery Partnership Application">
-                    <input type="hidden" name="partnership_type" value="delivery">
-                    
+
+                <form class="partnership-form" id="commissionPartnerForm" novalidate>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="delivery-name">Full Name</label>
-                            <input type="text" id="delivery-name" name="name" required>
+                            <label for="partner-name">Full Name</label>
+                            <input type="text" id="partner-name" name="name" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="delivery-phone">Phone Number</label>
-                            <input type="tel" id="delivery-phone" name="phone" required>
+                            <label for="partner-email">Email Address</label>
+                            <input type="email" id="partner-email" name="email" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="delivery-email">Email Address</label>
-                            <input type="email" id="delivery-email" name="email" required>
+                            <label for="partner-phone">Phone Number</label>
+                            <input type="tel" id="partner-phone" name="phone" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="delivery-location">Location/City</label>
-                            <select id="delivery-location" name="location" required>
-                                <option value="">Select your city</option>
-                                <option value="harare">Harare</option>
-                                <option value="bulawayo">Bulawayo</option>
-                                <option value="mutare">Mutare</option>
-                                <option value="gweru">Gweru</option>
-                                <option value="kwekwe">Kwekwe</option>
+                            <label for="partner-channel">Primary Channel</label>
+                            <select id="partner-channel" name="channel" required>
+                                <option value="">Select</option>
+                                <option value="social_media">Social Media</option>
+                                <option value="influencer">Influencer/Creator</option>
+                                <option value="community">Community/Association</option>
+                                <option value="business">Business/Agency</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="delivery-vehicle">Vehicle Type</label>
-                            <select id="delivery-vehicle" name="vehicle" required>
-                                <option value="">Select vehicle type</option>
-                                <option value="motorcycle">Motorcycle</option>
-                                <option value="bicycle">Bicycle</option>
-                                <option value="car">Car</option>
-                                <option value="van">Van/Truck</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="delivery-experience">Delivery Experience</label>
-                            <select id="delivery-experience" name="experience" required>
-                                <option value="">Select experience level</option>
-                                <option value="none">No experience</option>
-                                <option value="some">Some experience (1-2 years)</option>
-                                <option value="experienced">Experienced (3+ years)</option>
-                            </select>
+                            <label for="partner-audience">Audience Size / Reach</label>
+                            <input type="text" id="partner-audience" name="audience" placeholder="e.g., 15,000 followers / 20 groups">
                         </div>
                     </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="delivery-availability">Availability</label>
-                        <textarea id="delivery-availability" name="availability" rows="3" placeholder="Tell us about your preferred working hours and days"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large">
-                        Submit Application
-                    </button>
-                </form>
-            </div>
 
-            <!-- Strategic Partnership Form -->
-            <div id="strategic-form" class="partnership-form-container" data-aos="fade-up">
-                <div class="form-header">
-                    <h3>Strategic Partnership Application</h3>
-                    <p>Let's explore mutual growth opportunities</p>
-                </div>
-                
-                <form class="partnership-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                    <input type="hidden" name="subject" value="Strategic Partnership Inquiry">
-                    <input type="hidden" name="partnership_type" value="strategic">
-                    
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="strategic-company">Company Name</label>
-                            <input type="text" id="strategic-company" name="company" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="strategic-contact">Contact Person</label>
-                            <input type="text" id="strategic-contact" name="contact_person" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="strategic-email">Business Email</label>
-                            <input type="email" id="strategic-email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="strategic-phone">Phone Number</label>
-                            <input type="tel" id="strategic-phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="strategic-industry">Industry</label>
-                            <input type="text" id="strategic-industry" name="industry" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="strategic-size">Company Size</label>
-                            <select id="strategic-size" name="company_size" required>
-                                <option value="">Select company size</option>
-                                <option value="startup">Startup (1-10 employees)</option>
-                                <option value="small">Small (11-50 employees)</option>
-                                <option value="medium">Medium (51-200 employees)</option>
-                                <option value="large">Large (200+ employees)</option>
-                            </select>
-                        </div>
-                    </div>
-                    
                     <div class="form-group full-width">
-                        <label for="strategic-proposal">Partnership Proposal</label>
-                        <textarea id="strategic-proposal" name="proposal" rows="4" placeholder="Describe your partnership idea and how we can work together" required></textarea>
+                        <label for="partner-notes">Tell us about your strategy</label>
+                        <textarea id="partner-notes" name="notes" rows="4" placeholder="How will you drive sales and signups?"></textarea>
                     </div>
-                    
-                    <button type="submit" class="btn btn-secondary btn-large">
-                        Submit Proposal
-                    </button>
-                </form>
-            </div>
 
-            <!-- Financial Partnership Form -->
-            <div id="financial-form" class="partnership-form-container" data-aos="fade-up">
-                <div class="form-header">
-                    <h3>Financial Partnership Application</h3>
-                    <p>Power Zimbabwe's digital payment infrastructure</p>
-                </div>
-                
-                <form class="partnership-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                    <input type="hidden" name="subject" value="Financial Partnership Application">
-                    <input type="hidden" name="partnership_type" value="financial">
-                    
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="financial-institution">Institution Name</label>
-                            <input type="text" id="financial-institution" name="institution" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="financial-contact">Contact Person</label>
-                            <input type="text" id="financial-contact" name="contact_person" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="financial-email">Business Email</label>
-                            <input type="email" id="financial-email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="financial-phone">Phone Number</label>
-                            <input type="tel" id="financial-phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="financial-type">Institution Type</label>
-                            <select id="financial-type" name="institution_type" required>
-                                <option value="">Select type</option>
-                                <option value="bank">Commercial Bank</option>
-                                <option value="mobile_money">Mobile Money Provider</option>
-                                <option value="payment_gateway">Payment Gateway</option>
-                                <option value="fintech">FinTech Company</option>
-                                <option value="microfinance">Microfinance Institution</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="financial-license">License/Registration</label>
-                            <input type="text" id="financial-license" name="license" placeholder="RBZ license number or registration details" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="financial-services">Services Offered</label>
-                        <textarea id="financial-services" name="services" rows="3" placeholder="Describe the financial services you can provide" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-accent btn-large">
-                        Submit Application
+                    <button type="submit" class="btn btn-primary btn-large" id="partner-submit-btn">
+                        Apply to Partner
                     </button>
+                    <div id="partner-feedback" class="form-feedback" style="display:none;"></div>
                 </form>
             </div>
         </div>
@@ -1223,16 +1112,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/navigation.js"></script>
-    <script src="./js/scroll-animations.js"></script>
-    <script src="./js/form-validation.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-    </script>
-</body>
-</html>
+    <script src="./js/success.js"></script>
+    <script type="module" src="./js/partnerships.js"></script>
+  </body>
+  </html>

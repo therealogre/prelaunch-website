@@ -1,0 +1,14 @@
+This directory will contain the following stock images:
+
+1. hero-bg.jpg - A vibrant image of a busy marketplace or shopping district
+2. business-owner.jpg - A professional business owner in a shop
+3. happy-customer.jpg - A satisfied customer shopping
+4. team-meeting.jpg - A team in a business meeting
+5. mobile-app.jpg - A smartphone showing the app interface
+6. payment-process.jpg - A secure payment transaction in progress
+7. delivery.jpg - A delivery person with a package
+8. support.jpg - A customer support representative
+9. analytics.jpg - Business analytics dashboard
+10. testimonial-1.jpg - First testimonial profile picture
+11. testimonial-2.jpg - Second testimonial profile picture
+12. testimonial-3.jpg - Third testimonial profile picture

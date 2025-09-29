@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard - Helensvale Connect</title>
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Business Dashboard</h1>
+            <a href="#" id="logout-btn" class="btn btn-outline">Logout</a>
+        </header>
+        <main class="dashboard-content">
+            <div class="card" id="perks-card" style="display: none;">
+                <h2>Your Promised Pre-Launch Perks</h2>
+                <ul id="perks-list"></ul>
+            </div>
+            <div class="card">
+                <h2>Your Plan</h2>
+                <p>Current plan: <strong id="business-plan">Loading...</strong></p>
+            </div>
+            <div class="card">
+                <h2>Business Details</h2>
+                <p>Business Name: <span id="business-name">Loading...</span></p>
+                <p>Contact Email: <span id="business-email">Loading...</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="./js/env.js"></script>
+    <script type="module" src="./js/business-dashboard.js"></script>
+</body>
+</html>

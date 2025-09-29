@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Helensvale Connect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/membership.css">
+    <style>
+        .success-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #10B981;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1F2937;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            color: #4B5563;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #4F46E5;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #4338CA;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+        
+        .order-details {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #E5E7EB;
+            text-align: left;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #F3F4F6;
+        }
+        
+        .detail-label {
+            color: #6B7280;
+        }
+        
+        .detail-value {
+            font-weight: 500;
+            color: #1F2937;
+        }
+        
+        @media (max-width: 640px) {
+            .success-container {
+                margin: 40px 20px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Payment Successful!</h1>
+            <p>Thank you for your payment. Your subscription has been activated successfully.</p>
+            
+            <div id="orderDetails" class="order-details">
+                <h3>Order Details</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Order Number:</span>
+                    <span id="orderNumber" class="detail-value">Loading...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Plan:</span>
+                    <span id="planName" class="detail-value">Loading...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Amount:</span>
+                    <span id="amount" class="detail-value">Loading...</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Status:</span>
+                    <span id="status" class="detail-value">Processing...</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <p>We've sent a confirmation email with your order details.</p>
+                <a href="/dashboard.html" class="btn">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get order details from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const reference = urlParams.get('reference');
+            const status = urlParams.get('status') || 'completed';
+            
+            // Update UI with order details
+            if (reference) {
+                document.getElementById('orderNumber').textContent = reference;
+                
+                // In a real app, you would fetch order details from your backend
+                // This is just for demonstration
+                const plan = urlParams.get('plan') || 'VIP Membership';
+                const amount = urlParams.get('amount') || '$4.99';
+                
+                document.getElementById('planName').textContent = plan;
+                document.getElementById('amount').textContent = amount;
+                document.getElementById('status').textContent = 'Active';
+                document.getElementById('status').style.color = '#10B981';
+                
+                // Track successful payment
+                if (window.gtag) {
+                    gtag('event', 'purchase', {
+                        transaction_id: reference,
+                        value: parseFloat(amount.replace('$', '')),
+                        currency: 'USD',
+                        items: [{
+                            item_name: plan,
+                            price: parseFloat(amount.replace('$', '')),
+                            item_category: 'Membership'
+                        }]
+                    });
+                }
+            } else {
+                // If no reference, show an error
+                document.getElementById('orderDetails').innerHTML = `
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Unable to load order details. Please check your email for confirmation.
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

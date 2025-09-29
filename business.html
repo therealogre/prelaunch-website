@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration - Helensvale Connect</title>
+    <meta name="description" content="Grow your business with Helensvale Connect. Choose the perfect plan for your shop's needs.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/membership.css">
+    <style>
+        /* Business Page Specific Styles */
+        .business-hero {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4e44ce, #8e44ad);
+        }
+        
+        .business-hero h1 {
+            color: #1a237e;
+            margin-bottom: 16px;
+        }
+        
+        .business-hero p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: #3f51b5;
+        }
+        
+        .business-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .business-feature {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .business-feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .business-feature i {
+            font-size: 36px;
+            color: #4e44ce;
+            margin-bottom: 16px;
+        }
+        
+        .business-feature h3 {
+            color: #1a237e;
+            margin-bottom: 12px;
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+            position: relative;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-header h2 {
+            color: #1a237e;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #5c6bc0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.02);
+            position: relative;
+            overflow: visible;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(78, 68, 206, 0.3);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            color: #1a237e;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 16px 0 8px;
+            line-height: 1;
+            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .price span {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-top: 10px;
+            margin-left: 4px;
+        }
+        
+        .pricing-subtitle {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 24px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            color: #495057;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+        
+        .pricing-features li i {
+            color: var(--primary);
+            margin-top: 4px;
+            font-size: 14px;
+            min-width: 20px;
+        }
+        
+        .pricing-features li.disabled {
+            color: #adb5bd;
+            text-decoration: line-through;
+        }
+        
+        .pricing-features li.disabled i {
+            color: #adb5bd;
+        }
+        
+        .btn-enterprise {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .btn-enterprise:hover {
+            text-decoration: none;
+        }
+        
+        .btn-enterprise:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78, 68, 206, 0.2);
+        }
+        
+        .faq-section {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4e44ce, #8e44ad);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .section-header h2 {
+            color: #1a237e;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            color: #5c6bc0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-question h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a237e;
+        }
+        
+        .faq-question i {
+            color: #6c757d;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .faq-answer p {
+            margin: 0;
+            padding: 0 24px 24px;
+            color: #495057;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #4e44ce 0%, #6a5acd 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: white;
+            opacity: 0.2;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="./assets/logo.svg" alt="Helensvale Connect" class="nav-logo">
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html#customers" class="nav-link">For Shoppers</a>
+                <a href="index.html#shops" class="nav-link">For Businesses</a>
+                <a href="index.html#pricing" class="nav-link">Pricing</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="customer-vip.html" class="btn btn-outline">Membership</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="business-hero">
+        <div class="container">
+            <h1>Grow Your Business with Helensvale Connect</h1>
+            <p>Join Zimbabwe's fastest growing business network and connect with thousands of local customers. Choose the perfect plan for your shop's needs.</p>
+            
+            <div class="business-features">
+                <div class="business-feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Reach More Customers</h3>
+                    <p>Get discovered by thousands of local shoppers looking for what you offer.</p>
+                </div>
+                <div class="business-feature">
+                    <i class="fas fa-tools"></i>
+                    <h3>Powerful Tools</h3>
+                    <p>Everything you need to manage your online presence in one place.</p>
+                </div>
+                <div class="business-feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>Dedicated Support</h3>
+                    <p>Our team is here to help you succeed every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the perfect plan for your business. No hidden fees, cancel anytime.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$9.99<span>/month</span></div>
+                    <p class="pricing-subtitle">Perfect for new businesses</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 50 products</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Standard listing</li>
+                        <li><i class="fas fa-check"></i> Social media integration</li>
+                    </ul>
+                    <a href="business-register.html?plan=starter&billing=monthly" class="btn btn-outline btn-block">Get Started</a>
+                </div>
+                
+                <!-- Growth Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Growth</h3>
+                    <div class="price">$29.99<span>/month</span></div>
+                    <p class="pricing-subtitle">For growing businesses</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Starter</li>
+                        <li><i class="fas fa-check"></i> Up to 500 products</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Promoted listings</li>
+                        <li><i class="fas fa-check"></i> Inventory management</li>
+                        <li><i class="fas fa-check"></i> Discount codes</li>
+                    </ul>
+                    <a href="business-register.html?plan=growth&billing=monthly" class="btn btn-primary btn-block">Start Growing</a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p class="pricing-subtitle">For established businesses</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Growth</li>
+                        <li><i class="fas fa-check"></i> Unlimited products</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                        <li><i class="fas fa-check"></i> White-label solutions</li>
+                        <li><i class="fas fa-check"></i> 24/7 priority support</li>
+                    </ul>
+                    <a href="mailto:sales@helensvaleconnect.com?subject=Enterprise Plan Inquiry" class="btn-enterprise">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="pricing-note text-center" style="margin-top: 40px;">
+                <p><i class="fas fa-lock"></i> Secure payment. No credit card required to start.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our business plans</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What payment methods do you accept?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit and debit cards, mobile money, and bank transfers. All payments are processed securely through our payment partners.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I upgrade or downgrade my plan later?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan at any time. When you upgrade, you'll be charged a prorated amount for the remainder of your billing cycle. Downgrades will take effect at the start of your next billing period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is there a contract or long-term commitment?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, there are no long-term contracts. You can cancel your subscription at any time. We believe in earning your business every month.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What happens if I go over my product limit?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you reach your product limit, you won't be able to add more products until you either remove some products or upgrade your plan. We'll notify you when you're approaching your limit.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer discounts for annual billing?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 20% discount when you choose annual billing instead of monthly. This discount is automatically applied when you select the annual billing option at checkout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to grow your business?</h2>
+            <p>Join hundreds of local businesses already growing with Helensvale Connect. Start your 14-day free trial today.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-outline" style="color: white; border-color: white;">Learn More</a>
+                <a href="#" class="btn btn-primary" style="background: white; color: #4e44ce;">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/logo-white.svg" alt="Helensvale Connect" style="height: 40px; margin-bottom: 16px;">
+                    <p>Connecting local businesses with customers across Zimbabwe.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>For Shoppers</h4>
+                        <ul>
+                            <li><a href="customer-vip.html">Membership</a></li>
+                            <li><a href="#">Browse Shops</a></li>
+                            <li><a href="#">Deals & Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>For Businesses</h4>
+                        <ul>
+                            <li><a href="business.html">Pricing</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Success Stories</a></li>
+                            <li><a href="#">Resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Helensvale Connect. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/membership.js"></script>
+    <script>
+        // Initialize FAQ accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Toggle billing cycle
+            const billingToggle = document.getElementById('billingToggle');
+            if (billingToggle) {
+                billingToggle.addEventListener('change', function() {
+                    const isYearly = this.checked;
+                    const prices = document.querySelectorAll('.price');
+                    const periods = document.querySelectorAll('.price-period');
+                    const saveBadges = document.querySelectorAll('.save-badge');
+                    
+                    prices.forEach(priceEl => {
+                        const monthlyPrice = parseFloat(priceEl.getAttribute('data-monthly') || '0');
+                        if (isYearly) {
+                            const yearlyPrice = (monthlyPrice * 12 * 0.8).toFixed(2); // 20% off for annual
+                            priceEl.textContent = yearlyPrice;
+                        } else {
+                            priceEl.textContent = monthlyPrice.toFixed(2);
+                        }
+                    });
+                    
+                    periods.forEach(period => {
+                        period.textContent = isYearly ? '/year' : '/month';
+                    });
+                    
+                    saveBadges.forEach(badge => {
+                        badge.style.display = isYearly ? 'inline-block' : 'none';
+                    });
+                    
+                    // Update plan links with billing parameter
+                    const planLinks = document.querySelectorAll('[data-plan]');
+                    planLinks.forEach(link => {
+                        const plan = link.getAttribute('data-plan');
+                        link.href = `business-register.html?plan=${plan}&billing=${isYearly ? 'yearly' : 'monthly'}`;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Processing - Helensvale Connect</title>
+    <meta name="description" content="Secure payment processing for Helensvale Connect subscriptions and registrations.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/core.css">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="container">
+            <a href="javascript:history.back()" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </a>
+        </div>
+    </div>
+
+    <!-- Payment Header -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-lock"></i>
+                    Secure Payment
+                </h1>
+                <p class="hero-subtitle">
+                    Complete your payment securely. All transactions are protected by industry-standard encryption.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Form -->
+    <section class="section">
+        <div class="container">
+            <div class="payment-layout">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="orderDetails">
+                        <div class="order-item">
+                            <span id="orderDescription">Loading...</span>
+                            <span id="orderAmount">$0.00</span>
+                        </div>
+                    </div>
+                    <div class="order-total">
+                        <span>Total</span>
+                        <span id="totalAmount" class="total-price">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <div class="payment-form-container">
+                    <form class="payment-form" id="paymentForm">
+                        <div class="form-section">
+                            <h4>Payment Information</h4>
+
+                            <div class="form-group">
+                                <label for="cardholderName">Cardholder Name *</label>
+                                <input type="text" id="cardholderName" name="cardholderName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number *</label>
+                                <div class="card-input">
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date *</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="saveCard" name="saveCard">
+                                    <label for="saveCard">Save card for future payments</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4>Billing Information</h4>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Billing Address</label>
+                                <input type="text" id="address" name="address" placeholder="Street address">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code</label>
+                                    <input type="text" id="postalCode" name="postalCode">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="payButton">
+                            <i class="fas fa-credit-card"></i>
+                            <span id="payButtonText">Complete Payment</span>
+                        </button>
+
+                        <div class="payment-security">
+                            <div class="security-item">
+                                <i class="fas fa-lock"></i>
+                                <span>256-bit SSL encryption</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>PCI DSS compliant</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="fas fa-user-secret"></i>
+                                <span>Your data is never stored</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./assets/logo.svg" alt="Helensvale Connect" class="footer-logo">
+                    <p>Secure payment processing for Zimbabwe's premier business network.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Security</h4>
+                        <p>SSL Secured</p>
+                        <p>PCI Compliant</p>
+                        <p>Licensed Processor</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="https://instagram.com/helensvale.connect" target="_blank">Instagram Chat</a>
+                        <a href="mailto:support@helensvaleconnect.com">Email Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Helensvale Connect. All rights reserved.</p>
+                <p class="footer-note">Payments processed by licensed payment providers • Money-back guarantee</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/payment-fixed.js"></script>
+</body>
+</html>

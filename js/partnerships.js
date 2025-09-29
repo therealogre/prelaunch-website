@@ -1,28 +1,83 @@
-// Partnerships page specific functionality
+// Partnerships page specific functionality (commission-only unified form)
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 100
-    });
+    if (window.AOS) {
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+    }
 
-    // Initialize all partnership forms
-    initDeliveryPartnerForm();
-    initInfluencerPartnerForm();
-    initStrategicPartnerForm();
-
-    // Smooth scrolling for form navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Bind unified commission partner form
+    const form = document.getElementById('commissionPartnerForm');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            const submitBtn = document.getElementById('partner-submit-btn');
+            const feedback = document.getElementById('partner-feedback');
+            const original = submitBtn ? submitBtn.innerHTML : '';
+
+            // Collect minimal fields
+            const name = document.getElementById('partner-name')?.value.trim();
+            const email = document.getElementById('partner-email')?.value.trim();
+            const phone = document.getElementById('partner-phone')?.value.trim();
+            const channel = document.getElementById('partner-channel')?.value;
+            const audience = document.getElementById('partner-audience')?.value.trim();
+            const notes = document.getElementById('partner-notes')?.value.trim();
+
+            // Basic validation
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                if (feedback) { feedback.style.display = 'block'; feedback.className = 'form-feedback error'; feedback.textContent = 'Please enter a valid email.'; }
+                return;
+            }
+            if (!name) {
+                if (feedback) { feedback.style.display = 'block'; feedback.className = 'form-feedback error'; feedback.textContent = 'Please enter your full name.'; }
+                return;
+            }
+
+            try {
+                if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...'; }
+                if (feedback) { feedback.style.display = 'none'; }
+
+                // Submit via serverless subscribe endpoint (type=partner)
+                const resp = await fetch('/.netlify/functions/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email,
+                        name,
+                        type: 'partner',
+                        fields: { phone, channel, audience, notes }
+                    })
                 });
+                const data = await resp.json().catch(() => ({}));
+                if (!resp.ok) {
+                    throw new Error(data.error || 'Unable to submit application');
+                }
+
+                if (feedback) {
+                    feedback.style.display = 'block';
+                    feedback.className = 'form-feedback success';
+                    feedback.textContent = 'Thank you! Your partner application was received. We will reach out with your referral toolkit within 24–48 hours.';
+                }
+                form.reset();
+            } catch (err) {
+                if (feedback) {
+                    feedback.style.display = 'block';
+                    feedback.className = 'form-feedback error';
+                    feedback.textContent = `Submission failed: ${err.message}`;
+                }
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = original; }
+            }
+        });
+    }
+
+    // Smooth scrolling for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });

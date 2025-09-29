@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Helensvale Connect</title>
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Customer Dashboard</h1>
+            <a href="#" id="logout-btn" class="btn btn-outline">Logout</a>
+        </header>
+        <main class="dashboard-content">
+            <div class="card" id="perks-card" style="display: none;">
+                <h2>Your Promised VIP Perks</h2>
+                <ul id="perks-list"></ul>
+            </div>
+            <div class="card">
+                <h2>Membership Status</h2>
+                <p>Your current plan: <strong id="customer-plan">Loading...</strong></p>
+            </div>
+            <div class="card">
+                <h2>Your Profile</h2>
+                <p>Name: <span id="customer-name">Loading...</span></p>
+                <p>Email: <span id="customer-email">Loading...</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="./js/env.js"></script>
+    <script type="module" src="./js/customer-dashboard.js"></script>
+</body>
+</html>
