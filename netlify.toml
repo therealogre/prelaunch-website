@@ -1,30 +1,54 @@
 [build]
-  functions = "functions"
+  # Base directory for the build
+  base = "."
+  
+  # Directory containing the publishable files
   publish = "."
-  command = "npm install"
+  
+  # Directory containing Netlify functions
+  functions = "functions"
+  
+  # Build command
+  command = "npm install && npm run build"
 
 [build.environment]
-  NODE_VERSION = "16"
+  # Node.js version
+  NODE_VERSION = "18"
+  
+  # Build environment
+  NODE_ENV = "production"
+  
+  # Enable gzip compression
+  NETLIFY_USE_YARN = "true"
+  
+  # Build flags
   NPM_FLAGS = "--production=false"
+  
+  # Enable build plugins
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
+# Development server settings
 [dev]
-  port = 8888
-  functionsPort = 8889
-  autoLaunch = false
-  framework = "#static"
-  targetPort = 3000
+  port = 3000
   publish = "."
+  targetPort = 3000
+  framework = "#static"
+  autoLaunch = false
 
+# Redirects
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+  force = false
 
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -32,7 +56,38 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.paynow.co.zw;"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# Functions configuration
 [functions]
+  # Node.js version for functions
   node_bundler = "esbuild"
-  external_node_modules = ["paynow", "@supabase/supabase-js"]
+  
+  # External modules that should not be bundled
+  external_node_modules = ["paynow", "@supabase/supabase-js", "node-fetch"]
+  
+  # Environment variables for functions
+  [functions.environment]
+    NODE_ENV = "production"
+    
+# Environment variables for build process
+[context.production.environment]
+  NODE_ENV = "production"
+  
+[context.deploy-preview.environment]
+  NODE_ENV = "staging"
+  
+[context.branch-deploy.environment]
+  NODE_ENV = "staging"
+
+# Build plugins
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+  
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
