@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./css/core.css">
     <link rel="stylesheet" href="./css/membership.css">
     <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/premium.css">
+    <link rel="stylesheet" href="./css/hero-luxury.css">
+    <link rel="stylesheet" href="./css/market-projections.css">
     <meta name="robots" content="noindex, nofollow">
     <!-- Registration Banner -->
     <style>
@@ -61,96 +65,133 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="./assets/logo.svg" alt="Helensvale Connect" class="nav-logo">
-                <span>Helensvale Connect</span>
-            </div>
-            <div class="nav-actions">
-                <a href="#customers" class="nav-link">For Shoppers</a>
-                <a href="#shops" class="nav-link">For Businesses</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="customer-vip.html" class="btn btn-outline">Membership</a>
-                <a href="https://instagram.com/helensvale.connect" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-instagram"></i> Chat Now
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-v2">
+    <!-- Navigation will be injected by navigation.js -->
+    
+    <!-- Hero Section with Luxurious Background -->
+    <section class="hero-v2" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
         <div class="hero-container">
             <!-- Shopper Side -->
             <div class="hero-panel shopper-panel">
                 <div class="hero-content text-center">
-                    <div class="hero-icon"><i class="fas fa-shopping-bag"></i></div>
-                    <h1 class="hero-title">Shop Smarter, Support Local</h1>
-                    <p class="hero-subtitle">Find the best deals from trusted businesses in your community. Save money while supporting the Zimbabwean economy.</p>
-                    <a href="#customers" class="btn btn-primary btn-large">Start Shopping</a>
+                    <div class="hero-icon"><i class="fas fa-gem"></i></div>
+                    <h1 class="hero-title">Luxury Shopping, Elevated</h1>
+                    <p class="hero-subtitle">Discover exclusive collections from Zimbabwe's finest boutiques and designers. Experience luxury shopping like never before.</p>
+                    <a href="#customers" class="btn btn-primary btn-large">Explore Collections</a>
                 </div>
             </div>
 
             <!-- Business Side -->
             <div class="hero-panel business-panel">
                 <div class="hero-content text-center">
-                    <div class="hero-icon"><i class="fas fa-store"></i></div>
-                    <h1 class="hero-title">Grow Your Business, Not Your Workload</h1>
-                    <p class="hero-subtitle">Reach thousands of local customers ready to buy. Get online in minutes and watch your sales grow.</p>
-                    <a href="#shops" class="btn btn-secondary btn-large">Register Your Business</a>
+                    <div class="hero-icon"><i class="fas fa-store-alt"></i></div>
+                    <h1 class="hero-title">Premium Retail Platform</h1>
+                    <p class="hero-subtitle">Showcase your luxury brand to discerning customers. Join Zimbabwe's most exclusive retail network today.</p>
+                    <a href="business-registration-new.html" class="btn btn-outline btn-large">Register Your Boutique</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="section why-us-section">
+    <!-- Luxurious Hero Section -->
+    <section class="hero-v2" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+        <div class="hero-container">
+            <!-- Shopper Side -->
+            <div class="hero-panel shopper-panel">
+                <div class="hero-content text-center">
+                    <div class="hero-icon"><i class="fas fa-gem"></i></div>
+                    <h1 class="hero-title">Luxury Shopping, Elevated</h1>
+                    <p class="hero-subtitle">Discover exclusive collections from Zimbabwe's finest boutiques and designers. Experience luxury shopping like never before.</p>
+                    <div class="hero-cta">
+                        <a href="#premium-experience" class="btn btn-primary btn-large">Explore Collections</a>
+                        <a href="customer-vip.html" class="btn btn-outline btn-large">VIP Membership</a>
+                    </div>
+                    <div class="trust-badges">
+                        <span><i class="fas fa-shield-alt"></i> Secure Checkout</span>
+                        <span><i class="fas fa-star"></i> Curated Selection</span>
+                        <span><i class="fas fa-truck"></i> Premium Delivery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Side -->
+            <div class="hero-panel business-panel">
+                <div class="hero-content text-center">
+                    <div class="hero-icon"><i class="fas fa-store-alt"></i></div>
+                    <h1 class="hero-title">Premium Retail Platform</h1>
+                    <p class="hero-subtitle">Showcase your luxury brand to discerning customers. Join Zimbabwe's most exclusive retail network today.</p>
+                    <div class="hero-cta">
+                        <a href="business-registration-new.html" class="btn btn-primary btn-large">Register Your Boutique</a>
+                        <a href="#shops" class="btn btn-outline btn-large">Learn More</a>
+                    </div>
+                    <div class="business-features">
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Grow Your Reach</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <span>Powerful Tools</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <span>Dedicated Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Premium Experience Section -->
+    <section id="premium-experience" class="section premium-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="eyebrow">A Better Way</span>
-                <h2>Stop Searching, Start Connecting</h2>
-                <p class="section-subtitle">We built Helensvale Connect to solve the real-world challenges faced by Zimbabwean shoppers and businesses every day.</p>
+                <span class="eyebrow">The Premium Experience</span>
+                <h2>Elevate Your Shopping Journey</h2>
+                <p class="section-subtitle">Discover why discerning shoppers and luxury brands choose Helensvale Connect</p>
             </div>
-            <div class="why-us-container">
-                <!-- The Old Way -->
-                <div class="problem-column">
-                    <h3>The Old Way</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-times-circle"></i>
-                            <p><strong>For Shoppers:</strong> Endless searching on fragmented social media groups with no price comparison or trusted reviews.</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-times-circle"></i>
-                            <p><strong>For Businesses:</strong> Struggling for visibility, relying on word-of-mouth, and dealing with complex, expensive payment systems.</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-times-circle"></i>
-                            <p><strong>For Both:</strong> Lack of a central, trusted platform, leading to missed opportunities and frustration.</p>
-                        </li>
-                    </ul>
+            
+            <div class="premium-features">
+                <!-- Feature 1 -->
+                <div class="premium-feature">
+                    <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="feature-overlay">
+                            <h3>Curated Luxury</h3>
+                            <p>Handpicked selection of Zimbabwe's finest boutiques and designers</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- The Helensvale Way -->
-                <div class="solution-column">
-                    <h3>The Helensvale Way</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>For Shoppers:</strong> A one-stop platform to discover local businesses, compare prices instantly, and shop with confidence.</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>For Businesses:</strong> Get an instant online presence, reach thousands of local customers, and accept secure payments effortlessly.</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>For Both:</strong> A powerful, unified network that empowers local commerce and strengthens the community.</p>
-                        </li>
-                    </ul>
+                
+                <!-- Feature 2 -->
+                <div class="premium-feature">
+                    <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="feature-overlay">
+                            <h3>Personal Shopping</h3>
+                            <p>Dedicated concierge service for VIP members</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Feature 3 -->
+                <div class="premium-feature">
+                    <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="feature-overlay">
+                            <h3>Exclusive Access</h3>
+                            <p>Private sales and members-only events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons text-center" style="margin-top: 3rem;">
+                <a href="customer-vip.html" class="btn btn-primary btn-large">Explore VIP Benefits</a>
+                <a href="business-registration-new.html" class="btn btn-outline btn-large">Join as a Retailer</a>
             </div>
         </div>
     </section>
@@ -604,12 +645,131 @@
         </div>
     </footer>
 
+    <!-- Market Projections Section -->
+    <section id="market-projections" class="section market-projections">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Zimbabwe's Business Revolution</span>
+                <h2>Empowering Zimbabwean Businesses in the Digital Age</h2>
+                <p class="section-subtitle">Join the movement transforming how businesses connect, grow, and thrive in Zimbabwe. Our platform bridges the gap between quality businesses and their ideal customers while fostering powerful local partnerships.</p>
+            </div>
+            
+            <!-- Growth Metrics -->
+            <div class="growth-metrics">
+                <div class="metric-card">
+                    <div class="metric-value" data-target="85" data-suffix="%">0%</div>
+                    <div class="metric-label">Increase in Customer Reach</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-target="65" data-suffix="%">0%</div>
+                    <div class="metric-label">Faster Business Growth</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-target="500" data-suffix="+">0+</div>
+                    <div class="metric-label">Potential Business Partners</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-target="24" data-suffix="/7">0/7</div>
+                    <div class="metric-label">Access to Customers</div>
+                </div>
+            </div>
+            
+            <!-- Partnership Network -->
+            <div class="partnership-network">
+                <h3 class="text-center mb-5">Strategic Partnership Opportunities</h3>
+                <div class="partnership-grid">
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Delivery Partners</h4>
+                        <p>Connect with reliable delivery services to expand your reach and offer seamless order fulfillment.</p>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Marketing Experts</h4>
+                        <p>Collaborate with top marketing professionals to enhance your brand's visibility and customer acquisition.</p>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Tech Specialists</h4>
+                        <p>Access skilled developers and IT experts to build and optimize your digital presence.</p>
+                    </div>
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Industry Leaders</h4>
+                        <p>Network with established businesses for mentorship, collaboration, and growth opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Growth Path -->
+            <div class="business-growth-path">
+                <h3 class="text-center mb-5">Your Path to Digital Success</h3>
+                <div class="growth-stages">
+                    <div class="growth-stage">
+                        <div class="stage-number">1</div>
+                        <div class="stage-content">
+                            <h3 class="stage-title">Digital Transformation</h3>
+                            <p class="stage-description">Transition your business online with our easy-to-use platform, complete with digital storefront setup and product listing optimization.</p>
+                        </div>
+                    </div>
+                    <div class="growth-stage">
+                        <div class="stage-number">2</div>
+                        <div class="stage-content">
+                            <h3 class="stage-title">Local Market Penetration</h3>
+                            <p class="stage-description">Reach customers across Zimbabwe with targeted marketing and strategic partnerships with local delivery services.</p>
+                        </div>
+                    </div>
+                    <div class="growth-stage">
+                        <div class="stage-number">3</div>
+                        <div class="stage-content">
+                            <h3 class="stage-title">Strategic Partnerships</h3>
+                            <p class="stage-description">Connect with complementary businesses to create bundled offerings and cross-promotional opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="growth-stage">
+                        <div class="stage-number">4</div>
+                        <div class="stage-content">
+                            <h3 class="stage-title">Market Leadership</h3>
+                            <p class="stage-description">Establish your brand as an industry leader with our analytics, customer insights, and continuous platform improvements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="commitment-box">
+                <div class="commitment-content">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <div>
+                        <h3>Our Commitment to Zimbabwean Businesses</h3>
+                        <p>We're dedicated to helping Zimbabwean businesses thrive in the digital economy. Our team is committed to continuous platform improvements, local market understanding, and providing the tools you need to succeed.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons text-center mt-5">
+                <a href="business-registration-new.html" class="btn btn-primary btn-large">Join the Digital Revolution</a>
+                <a href="#contact" class="btn btn-outline btn-large">Speak With Our Team</a>
+            </div>
+        </div>
+    </section>
+    
     <!-- Scripts -->
     <script src="./js/countdown.js"></script>
+    <script src="./js/components/navigation.js"></script>
+    <script src="./js/navigation-behavior.js"></script>
     <script src="./content/landing-content.js"></script>
     <script src="./js/landing-page.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/newsletter.js"></script>
+    <script src="./js/market-projections.js"></script>
     <script src="./js/main.js"></script>
     <script type="module" src="./js/pricing.js"></script>
     <script src="./js/membership.js"></script>

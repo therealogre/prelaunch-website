@@ -1,0 +1,628 @@
+/* Market Projections Section */
+.market-projections {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f5f7ff 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.market-projections .section-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.market-projections .eyebrow {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4f46e5;
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.market-projections h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(90deg, #1a1a2e, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.market-projections .section-subtitle {
+    font-size: 1.3rem;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    padding: 0 2rem;
+}
+
+/* Growth Metrics */
+.growth-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(229, 231, 235, 0.7);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.metric-card:hover::before {
+    opacity: 1;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.metric-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1.5rem 0;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1px;
+}
+
+.metric-value::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+.metric-label {
+    font-size: 1.2rem;
+    color: #374151;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+/* Partnership Network */
+.partnership-network {
+    margin: 6rem 0;
+}
+
+.partnership-network h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.partnership-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.partnership-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.partnership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.partnership-card:hover::before {
+    opacity: 1;
+}
+
+.partnership-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #4f46e5;
+    transition: all 0.3s ease;
+}
+
+.partnership-card:hover .partnership-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #e6e9ff 0%, #d6dcff 100%);
+}
+
+.partnership-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.partnership-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Business Growth Path */
+.business-growth-path {
+    margin: 6rem 0;
+}
+
+.business-growth-path h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.growth-stages {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.growth-stages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, #4f46e5, #7c3aed);
+    border-radius: 4px;
+}
+
+.growth-stage {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 100px;
+}
+
+.stage-number {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 1;
+    border: 4px solid #f8fafc;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.stage-content {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.growth-stage:hover .stage-content {
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stage-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.stage-description {
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Commitment Box */
+.commitment-box {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border-radius: 16px;
+    padding: 3rem;
+    color: white;
+    margin: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
+}
+
+.commitment-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.commitment-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.commitment-content i {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.commitment-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.commitment-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .partnership-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .growth-stages::before {
+        left: 25px;
+    }
+    
+    .growth-stage {
+        padding-left: 80px;
+    }
+    
+    .stage-number {
+        left: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    
+    .stage-content {
+        padding: 1.5rem;
+    }
+    
+    .commitment-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .commitment-content i {
+        margin: 0 auto 1.5rem;
+    }
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+}
+
+.btn-outline:hover {
+    background: rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.timeline-progress {
+    height: 4px;
+    background: #e5e7eb;
+    position: relative;
+    margin: 3rem 0 4rem;
+    border-radius: 2px;
+}
+
+.timeline-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+
+.timeline-milestones {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.milestone {
+    position: relative;
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.milestone.active .milestone-dot {
+    transform: scale(1.2);
+    background: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.milestone-dot {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 3px solid #d1d5db;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.milestone-label {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.milestone-date {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Business Growth Path */
+.business-growth-path {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4rem;
+}
+
+.growth-stages {
+    display: flex;
+    flex-direction: column;
+}
+
+.growth-stage {
+    padding: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.growth-stage:last-child {
+    border-bottom: none;
+}
+
+.growth-stage:hover {
+    background: #f9fafb;
+}
+
+.stage-number {
+    width: 40px;
+    height: 40px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stage-content {
+    flex: 1;
+}
+
+.stage-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.stage-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .market-projections {
+        padding: 4rem 0;
+    }
+    
+    .market-projections h2 {
+        font-size: 2rem;
+    }
+    
+    .growth-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .growth-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .milestone {
+        width: 30%;
+    }
+    
+    .milestone:nth-child(4) {
+        width: 10%;
+    }
+    
+    .growth-stage {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stage-number {
+        margin: 0 0 1rem 0;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.metric-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metric-card:nth-child(2) { animation-delay: 0.2s; }
+.metric-card:nth-child(3) { animation-delay: 0.3s; }
+.metric-card:nth-child(4) { animation-delay: 0.4s; }
